@@ -9,11 +9,6 @@ body > div {
   width: 100vw;
 }
 
-.home {
-  background-color: black;
-}
-
-
 #container {
   height: 100%;
   display: flex;
@@ -38,6 +33,14 @@ body > div {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.home {
+  background-color: black;
+  color: whitesmoke;
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
+  border-width: 30ch;
 }
 
 .red {
