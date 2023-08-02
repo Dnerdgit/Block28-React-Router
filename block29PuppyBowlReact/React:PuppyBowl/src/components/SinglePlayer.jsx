@@ -3,7 +3,8 @@ import { dogPlayers } from '../API'
 
 
 export default function SinglePlayer({player}) {
-    const [singleDog, SetSingleDog] = useState("");
+    const singleDog = useState(`${player.id}`);
+    
 
     return (
         <div>
@@ -12,7 +13,7 @@ export default function SinglePlayer({player}) {
             <h4>{player.teamId} </h4>
             <img src= {`${player.imageUrl}`} />
             
-            {/* <button onClick={getAllPlayers}></button> */}
+            <button onClick={singleDog}>See Details</button>
         </div>
     )
 }

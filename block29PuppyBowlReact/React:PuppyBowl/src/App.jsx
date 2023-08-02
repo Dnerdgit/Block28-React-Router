@@ -11,6 +11,9 @@ function App() {
 
     <div id="container">
 
+      <div id="navbar">
+        <Navbar />
+      </div>
 
       <div id="main-route">
         <Routes>
