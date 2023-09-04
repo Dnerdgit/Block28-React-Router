@@ -1,14 +1,14 @@
 import './App.css';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom'
 import { AuthProvider } from 'react-auth-kit'
+import MainPage from './components/MainPage';
 
 function App() {
 
-
   return (
     <>
-    <Navbar />
+    {/* <Navbar />
     <AuthProvider>
       <Routes>
         <Route/>
@@ -17,7 +17,10 @@ function App() {
         <Route/>
         <Route/>
       </Routes>
-    </AuthProvider>
+    </AuthProvider> */}
+    <React.Fragment>
+      <MainPage/>
+    </React.Fragment>
      
     </>
   )

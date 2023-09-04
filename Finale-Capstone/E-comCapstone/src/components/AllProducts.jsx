@@ -21,7 +21,9 @@ export default function AllProducts() {
     return (
         <div className="allproducts">
             <div className="organized-items">
-
+                <div>
+                    <h3>Filter Products</h3>
+                </div>
             </div>
         </div>
     )
