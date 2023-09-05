@@ -10,7 +10,7 @@
   height: 100vh;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 2fr 5fr;
+  /* grid-template-rows: 1fr 1fr; */
   grid-template-areas: 'sign-in'
                        'all-products';
 }
@@ -24,6 +24,60 @@
   grid-area: all-products;
   background-color: blue;
 }
+
+.site-title {
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+  color: #7439db;
+  display: flex;
+  box-shadow: 0 10px #333;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.title {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  position:relative;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav {
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+  color: #7439db;
+  display: flex;
+  box-shadow: 0 10px #333;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+
+.nav ul {
+  font-size: 16px;
+  position: relative;
+  padding: 0;
+  margin: 5 0 0 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  background-size: cover;
+}
+.nav ul li {
+  position: relative;
+  justify-content: center;
+  background-size: cover;
+}
+
+
+
 /* .logo {
   height: 6em;
   padding: 1.5em;
