@@ -39,9 +39,9 @@ export default function AllProducts() {
             
             </div>
 
-            <div>
-                <h3>Filter Products</h3>
-                {/* {filteringItems.map((product, key) => {
+            <div className="product-comp">
+                <h3>All Products</h3>
+                {filteringItems.map((product, key) => {
                     return (
                         <div key={key} className="product">
                             <img src={product.image}
@@ -49,10 +49,9 @@ export default function AllProducts() {
                                  alt=""
                                  />
                             <h4>{product.title}</h4>
-                            
+
                             <li>
-                                {product.rating.rate}
-                                {product.rating.count}
+                                {product.rating.rate} Star Rating / {product.rating.count} Reviews
                             </li>
                             <li>
                                 ${product.price}
@@ -62,7 +61,7 @@ export default function AllProducts() {
                     )
                    
                 })
-                } */}
+                }
             </div>
         </div>
         

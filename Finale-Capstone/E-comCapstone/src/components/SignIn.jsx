@@ -14,13 +14,13 @@ export default function SignInLink () {
             const response = await fetch("https://fakestoreapi.com/auth/login",{
                 method: "POST",
                 body: JSON.stringify({
-                    username: "",
-                    password: "",
+                    username: username,
+                    password: password,
                 }),
             });
 
             const result = await response.json();
-
+            
         retrieveSignin(result);
             
         } catch (error) {
@@ -32,10 +32,10 @@ export default function SignInLink () {
 
     // }
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = async (data, event) => {
         event.preventDefault();
 
-        const signInApproval = await retrieveSignin(username, password);
+        const signInApproval = await retrieveSignin(data.username, data.password);
         console.log(signInApproval);
     }
  
