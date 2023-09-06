@@ -77,13 +77,14 @@ export default function SignInLink () {
                             onChange={(e) => setPassword(e.target.value)}
                             
                         />
+                    </div>
                         <br/>
                         <br/>
                         <button type="submit">Sign In</button>
                         <br/>
                         <br/>
                         <a className="make-account" href="">Don't have an account. Sign up!</a>
-                    </div>
+                    
                 </ul>
             </div>
             </form>

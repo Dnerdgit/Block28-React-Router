@@ -26,8 +26,11 @@ export default function AllProducts() {
             setFilteringItems(items);
         } else {
             const caseSense = items.filter((item) => 
-                item.title().toLowerCase().includes(word))
+                item.title().toLowerCase().includes(word)
+                )
+            setFilteringItems(caseSense);
         }
+        
     }
     
     return (
@@ -38,14 +41,26 @@ export default function AllProducts() {
 
             <div>
                 <h3>Filter Products</h3>
-                {/* {filterProducts.map((product, id) => {
+                {/* {filteringItems.map((product, key) => {
                     return (
-                        <div key={id} className="product">
+                        <div key={key} className="product">
+                            <img src={product.image}
+                                 className="product-image"
+                                 alt=""
+                                 />
+                            <h4>{product.title}</h4>
+                            
+                            <li>
+                                {product.rating.rate}
+                                {product.rating.count}
+                            </li>
+                            <li>
+                                ${product.price}
+                            </li>
 
                         </div>
-
                     )
-                    // <main key={product.id}/> 
+                   
                 })
                 } */}
             </div>
@@ -53,6 +68,9 @@ export default function AllProducts() {
         
     )
 
-
-
 }
+
+
+
+ // <main key={product.id} className="all-items"/>
+                            // <li>{product.title}</li>

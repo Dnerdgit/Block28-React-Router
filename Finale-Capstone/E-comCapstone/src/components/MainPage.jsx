@@ -1,7 +1,7 @@
 import React from 'react'
 import SignIn from './SignIn'
 import AllProducts from './AllProducts'
-import Navbar from './Navbar'
+// import Navbar from './Navbar'
 
 const MainPage = () => {
   return (
