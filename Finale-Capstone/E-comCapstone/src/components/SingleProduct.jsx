@@ -6,7 +6,7 @@ const SingleProduct = () => {
   const [singleItem, setSingleItem] = useState({});
 
   useEffect(() => {
-    console.log("Product ID:", productId);
+    console.log("Product number: ", productId);
     const fetchSingleItem = async () => {
       try {
         const response = await fetch(

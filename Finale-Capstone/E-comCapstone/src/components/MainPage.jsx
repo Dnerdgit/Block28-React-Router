@@ -8,9 +8,9 @@ const MainPage = () => {
     <React.Fragment>
         <section>
             <div className="layout">
-                <div className="sign-in">
+                {/* <div className="sign-in">
                     <SignIn/>
-                </div>
+                </div> */}
                 <div className="all-products">
                     <AllProducts/>
                 </div>

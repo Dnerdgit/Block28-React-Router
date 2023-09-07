@@ -16,7 +16,7 @@ h3 {
   /* background-color: blue; */
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr; */
 }
 
 .product-comp .product {
