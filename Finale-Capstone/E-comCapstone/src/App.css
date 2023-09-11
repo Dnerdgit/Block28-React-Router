@@ -204,7 +204,14 @@ a .sign-in-link:hover {
   background-size: cover;
 }
 
+input[type="radio"] {
+  display: none;
+}
 
+input .star {
+  cursor: pointer;
+  transition: color 200ms;
+}
 
 /* .logo {
   height: 6em;

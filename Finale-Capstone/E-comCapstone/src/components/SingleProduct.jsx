@@ -23,14 +23,23 @@ const SingleProduct = () => {
   }, [productId]);
   return (
     <>
-      <div>
-        <div>
-          <img src={singleItem.image}/>
-          <div>
-            <h3>{singleItem.title}</h3>
-            
+      <div className='single-product'>
+          <div className="left-single-image">
+            <img src={singleItem.image}/>
           </div>
-        </div>
+          <div className="right-single-above-details">
+            <h2>{singleItem.title}</h2>
+            <p>{singleItem.rating.rate} Star Rating / {singleItem.rating.count} Reviews</p>
+            <p>${singleItem.price}</p>
+            <br/>
+            <p>Sign up to qualify for Members Discounts</p>
+            <br/>
+            <br/>
+            <div className="right-single-below-details">
+              <p>{singleItem.description}</p>
+            </div>
+
+          </div>
       </div>
     </>
   )

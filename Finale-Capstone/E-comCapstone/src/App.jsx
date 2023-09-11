@@ -7,6 +7,7 @@ import Navigation from './components/Navbar'
 import AllProducts from './components/AllProducts';
 import SignIn from './components/SignIn'
 // import Searchbar from './components/Searchbar';
+import Rate from './Ratings/Rate';
 
 function App() {
 
@@ -32,7 +33,7 @@ function App() {
               path="/products-list"
               element={<AllProducts/>}/>
             <Route/>
-            <Route/>
+            <Route path="/ratings" element={<Rate/>}/>
           </Routes>
         </React.Fragment>
       </AuthProvider>
