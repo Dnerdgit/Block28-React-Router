@@ -57,7 +57,7 @@ export default function SignInLink () {
                             id="username"
                             value={username}
                             placeholder="username"
-                            onChange={(e) => setUsername(e.target.value)}
+                            onChange={(event) => setUsername(event.target.value)}
                             
                             />
                     </div>
@@ -74,7 +74,7 @@ export default function SignInLink () {
                             id="password"
                             value={password}
                             placeholder="********"
-                            onChange={(e) => setPassword(e.target.value)}
+                            onChange={(event) => setPassword(event.target.value)}
                             
                         />
                     </div>

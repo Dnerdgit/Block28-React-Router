@@ -46,7 +46,7 @@ export default function AllProducts() {
                         <div key={key} className="product">
                             <img src={product.image}
                                  className="product-image"
-                                 alt=""
+                                 alt="Products for viewing"
                                  />
                             <h4>{product.title}</h4>
 

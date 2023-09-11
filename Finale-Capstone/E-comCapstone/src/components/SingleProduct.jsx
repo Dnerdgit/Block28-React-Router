@@ -1,4 +1,5 @@
 import React from 'react'
+import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 const SingleProduct = () => {
@@ -21,7 +22,9 @@ const SingleProduct = () => {
     fetchSingleItem();
   }, [productId]);
   return (
-    <div>SingleProduct</div>
+    <>
+      <div>SingleProduct</div>
+    </>
   )
 }
 

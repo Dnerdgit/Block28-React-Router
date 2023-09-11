@@ -135,6 +135,7 @@ input {
 }
 
 a .sign-in-link{
+  /* position:absolute; */
   font-weight: 500;
   color: #010116;
   text-decoration: inherit;
@@ -167,6 +168,7 @@ a .sign-in-link:hover {
 }
 
 .nav-header ul li {
+  /* margin: 0 50px; */
   position: relative;
   justify-content:space-between;
   background-size: cover;
