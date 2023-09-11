@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from 'react';
 
 
 const Rate = ({count, rating, color, onRating}) => {
@@ -33,7 +34,7 @@ const Rate = ({count, rating, color, onRating}) => {
     }, [count, rating, hoverRating])
 
 
-    return <div>{starRating}</div>;
+    return (<div>{starRating}</div>);
 };
 
 Rate.propTypes = {

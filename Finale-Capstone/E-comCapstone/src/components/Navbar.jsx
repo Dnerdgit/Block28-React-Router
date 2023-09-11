@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Searchbar from './Searchbar'
 import { Navbar, Nav } from 'react-bootstrap'
 // import Avatar from '@mui/system'
+import  filterProducts  from './AllProducts'
 
 const Navigation = () => {
   return (
@@ -18,7 +19,7 @@ const Navigation = () => {
                     </li>
                     <li>
                         <Link className="site-search">
-                            <div className="search-bar"><Searchbar/></div>
+                            <div className="search-bar"><Searchbar filterProducts={filterProducts}/></div>
                         </Link>
                     </li>
                     <li>

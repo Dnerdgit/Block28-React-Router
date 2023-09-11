@@ -23,7 +23,15 @@ const SingleProduct = () => {
   }, [productId]);
   return (
     <>
-      <div>SingleProduct</div>
+      <div>
+        <div>
+          <img src={singleItem.image}/>
+          <div>
+            <h3>{singleItem.title}</h3>
+            
+          </div>
+        </div>
+      </div>
     </>
   )
 }
