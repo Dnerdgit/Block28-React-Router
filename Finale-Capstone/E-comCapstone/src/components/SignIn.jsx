@@ -2,12 +2,17 @@ import { useState } from 'react';
 import { useSignIn } from 'react-auth-kit';
 // import { useForm } from 'react-hook-form'
 // import { useNavigate } from 'react-router- dom'
-
+import { useAuth0 } from '@auth0/auth0-react';
 
 export default function SignInLink () {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    // const signIn = useSignIn();
+    const { 
+        loginWithPopup, 
+        loginWithRedirect, 
+        user, 
+        isAuthenticated 
+    } = useAuth0();
 
     const retrieveSignin = async () => {
         try {
@@ -27,10 +32,7 @@ export default function SignInLink () {
             console.log(error);
         }
     };
-    // const SignIn = useSignIn();
-    // const onSubmit = async( data, event ) =>{
-
-    // }
+    // const SignedIn = useSignIn();
 
     const handleSubmit = async (data, event) => {
         event.preventDefault();
@@ -80,10 +82,10 @@ export default function SignInLink () {
                     </div>
                         <br/>
                         <br/>
-                        <button type="submit">Sign In</button>
+                        <button onClick={loginWithRedirect} type="submit">Sign In</button>
                         <br/>
                         <br/>
-                        <a className="make-account" href="">Don't have an account. Sign up!</a>
+                        <a className="make-account" href="/products-list">{!isAuthenticated ? "Don't have an account Sign up!" : 'Continue'}</a>
                     
                 </ul>
             </div>

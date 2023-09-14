@@ -188,7 +188,7 @@ a .sign-in-link:hover {
 
 
 .nav ul {
-  font-size: 16px;
+  font-size: 18px;
   position: relative;
   padding: 0;
   margin: 5 0 0 0;
@@ -202,6 +202,9 @@ a .sign-in-link:hover {
   position: relative;
   justify-content: center;
   background-size: cover;
+  margin: 0px 15px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
 }
 
 input[type="radio"] {

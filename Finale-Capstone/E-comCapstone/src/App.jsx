@@ -7,7 +7,8 @@ import Navigation from './components/Navbar'
 import AllProducts from './components/AllProducts';
 import SignIn from './components/SignIn'
 // import Searchbar from './components/Searchbar';
-import Rate from './Ratings/Rate';
+// import Rate from './Ratings/Rate';
+// import CreateAccount from './components/CreateAccount';
 
 function App() {
 
@@ -32,8 +33,11 @@ function App() {
             <Route
               path="/products-list"
               element={<AllProducts/>}/>
+            {/* <Route
+              path='account/create'
+              element={<CreateAccount/>}/> */}
             <Route/>
-            <Route path="/ratings" element={<Rate/>}/>
+            {/* <Route path='/ratings' element={<Rate/>}/> */}
           </Routes>
         </React.Fragment>
       </AuthProvider>

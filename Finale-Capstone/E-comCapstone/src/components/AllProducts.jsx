@@ -23,7 +23,8 @@ export default function AllProducts() {
     const filterProducts = (word) => {
         if (word.trim() === "" || word.trim().length > 0) {
             word = word.trim().toLowerCase();
-            setFilteringItems(items);
+            return word === "" ? product : product.title.toLowerCase().includes(word);
+            // setFilteringItems(items);
         } else {
             const caseSense = items.filter((item) => 
                 item.title().toLowerCase().includes(word)

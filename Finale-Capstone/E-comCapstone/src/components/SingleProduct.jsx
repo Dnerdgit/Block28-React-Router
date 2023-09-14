@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
 
 const SingleProduct = () => {
   const { productId } = useParams();
@@ -34,6 +35,8 @@ const SingleProduct = () => {
             <br/>
             <p>Sign up to qualify for Members Discounts</p>
             <br/>
+            <br/>
+            <Button className='cart-plus' variant='success'>Add to Cart</Button>
             <br/>
             <div className="right-single-below-details">
               <p>{singleItem.description}</p>

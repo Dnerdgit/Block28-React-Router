@@ -8,7 +8,7 @@ const Navigation = () => {
   return (
 
     <>
-    <Navbar>
+        <Navbar>
             <nav className="nav-header">
                 <ul>
                     <>
