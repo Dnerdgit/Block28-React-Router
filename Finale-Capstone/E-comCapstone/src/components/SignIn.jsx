@@ -18,6 +18,9 @@ export default function SignInLink () {
         try {
             const response = await fetch("https://fakestoreapi.com/auth/login",{
                 method: "POST",
+                headers: {
+                    "Content-Type":'application/json',
+                },
                 body: JSON.stringify({
                     username: username,
                     password: password,
@@ -25,8 +28,9 @@ export default function SignInLink () {
             });
 
             const result = await response.json();
+            console.log(result);
+            return result;
             
-        retrieveSignin(result);
             
         } catch (error) {
             console.log(error);

@@ -6,6 +6,8 @@
   text-align: center; */
 }
 
+/*CSS for AllProducts*/
+
 h3 {
   color:aliceblue;
   margin-left: 70px;
@@ -14,16 +16,23 @@ h3 {
 .all-products {
   /* grid-area: all-products; */
   /* background-color: blue; */
-  display: grid;
-  grid-template-columns: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* grid-template-columns: 100%; */
   /* grid-template-rows: 1fr 1fr; */
 }
 
 .product-comp .product {
+  align-items: center;
   box-sizing: border-box;
   background-color: #9ca494;
   border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 5px;
+  text-decoration: none;
 }
 
 .product {
@@ -95,6 +104,8 @@ input {
   letter-spacing: 1px;
 }
 
+/*CSS for SearchBar*/
+
 .search-bar {
   background-color: white;
   font-family: "Poppins", sans-serif;
@@ -119,6 +130,8 @@ input {
   margin: 0;
   justify-content: flex-end;
 } */
+
+/*CSS for sign-in link*/
 
 .sign-in-link {
   background-color: white;
@@ -145,8 +158,10 @@ a .sign-in-link:hover {
   text-decoration: underline;
 }
 
+/*CSS for NavBar*/
+
 .nav-header {
-  background-color: white;
+  background-color: rgb(138, 7, 7);
   color: #7439db;
   display: flex;
   justify-content: center;
@@ -175,7 +190,7 @@ a .sign-in-link:hover {
 }
 
 .nav {
-  background-color: white;
+  background-color: rgb(4, 177, 24);
   font-family: "Poppins", sans-serif;
   color: #7439db;
   display: flex;
@@ -207,6 +222,11 @@ a .sign-in-link:hover {
   font-weight: bold;
 }
 
+/* .nav ul li:hover {
+  color: #73a6e5;
+  text-decoration: underline;
+} */
+
 input[type="radio"] {
   display: none;
 }
@@ -216,6 +236,52 @@ input .star {
   transition: color 200ms;
 }
 
+/*CSS for SingleProduct and product catergories link*/
+
+
+/* CSS for CRUD/Cart component */
+
+
+.crud {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table td {
+  width: 200px;
+  height: 50px;
+  background-color: rgb(54, 28, 28);
+  text-align: center;
+  color: white;
+}
+
+table td button {
+  padding: 5px 10px;
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+table td button.edit {
+  border: 1px solid green;
+  background-color: rgb(2, 108, 2);
+  color:white;
+}
+
+table td button.edit:hover {
+  background-color: #5b9228;
+}
+
+table td button.delete {
+  border: 1px solid red;
+  background-color: rgb(196, 19, 19);
+  color: white;
+}
+
+table td button.delete:hover {
+  background-color: rgb(133, 14, 14);
+}
 /* .logo {
   height: 6em;
   padding: 1.5em;

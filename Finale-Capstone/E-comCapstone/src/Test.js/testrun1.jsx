@@ -1,13 +1,16 @@
 import React, { Fragment } from "react";
 import {Button, Table} from 'react-bootstrap'
-import "bootstrap/dist/css/bootstrap.min.css"
+// import "bootstrap/dist/css/bootstrap.min.css"
 import Combat from "./testrun2";
+// import { useSelector } from "react-redux";
 
 function Home() {
+    // const users = useSelector((state) => state.users);
 
     return (
+        <>
         <Fragment>
-            <div style = {{margin:"10rem"}}>
+            <div className="crud" style = {{margin:"10rem"}}>
                 <Table striped bordered hover size="sm">
                     <thead>
                         <tr>
@@ -15,7 +18,10 @@ function Home() {
                                 Name
                             </th>
                             <th>
-                                Age
+                                Type
+                            </th>
+                            <th>
+                                Action
                             </th> 
                         </tr>
                     </thead>
@@ -23,14 +29,18 @@ function Home() {
                         {
                             Combat && Combat.length > 0 
                             ?
-                            Combat.map((item) => {
+                            Combat.map((item, index) => {
                                 return(
-                                    <tr>
+                                    <tr key={index}>
                                         <td>
                                             {item.Name}
                                         </td>
                                         <td>
                                             {item.Type}
+                                        </td>
+                                        <td>
+                                            <Button className="edit" onClick={() => alert(item.id)}>Edit</Button>
+                                            <Button className="delete" onClick={() => alert(item.id)}>Delete</Button>
                                         </td>
                                     </tr>
                                 )
@@ -42,6 +52,7 @@ function Home() {
                 </Table>
             </div>
         </Fragment>
+        </>
     )
 }
 

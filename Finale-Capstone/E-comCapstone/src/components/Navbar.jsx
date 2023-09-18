@@ -8,26 +8,26 @@ const Navigation = () => {
   return (
 
     <>
-        <Navbar>
+    <Navbar>
             <nav className="nav-header">
                 <ul>
                     <>
-                    <li>
-                        <Link to="/" className="site-title">
-                            <div className="title">Stag's E-Commerce</div>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className="site-search">
-                            <div className="search-bar"><Searchbar filterProducts={filterProducts}/></div>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/auth/login" className="site-log">
-                            <div className="sign-in-link"><div>Sign In</div></div>
-                                {/* <img className="sign-img"src="public/ECommerce photos/wjj8xils.bmp"/> */}
-                        </Link>
-                    </li>
+                        <li>
+                            <Link to="/" className="site-title">
+                                <div className="title">Stag's E-Commerce</div>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link className="site-search">
+                                <div className="search-bar"><Searchbar filterProducts={filterProducts}/></div>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/auth/login" className="site-log">
+                                <div className="sign-in-link"><div>Sign In</div></div>
+                                    {/* <img className="sign-img"src="public/ECommerce photos/wjj8xils.bmp"/> */}
+                            </Link>
+                        </li>
                     </>
                 </ul>
             </nav>
@@ -35,18 +35,21 @@ const Navigation = () => {
             <nav className="nav">
                 <ul>
                     <>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/category/electronics">Electronics</Link>
-                    </li>
-                    <li>
-                        <Link to="/category/clothing">Clothing</Link>
-                    </li>
-                    <li>
-                        <Link to="/category/jewelry">Jewelry</Link>
-                    </li>
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/category/electronics">Electronics</Link>
+                        </li>
+                        <li>
+                            <Link to="/category/men's clothing">MensWear</Link>
+                        </li>
+                        <li>
+                            <Link to="/category/women's clothing">WomensWear</Link>
+                        </li>
+                        <li>
+                            <Link to="/category/jewelery">Jewelry</Link>
+                        </li>
                     </>
                 </ul>
             </nav>
