@@ -6,7 +6,7 @@ import MainPage from './components/MainPage';
 import Navigation from './components/Navbar'
 import AllProducts from './components/AllProducts';
 import SignIn from './components/SignIn'
-// import Rate from './Ratings/Rate';
+import Rate from './Ratings/Rate';
 // import CreateAccount from './components/CreateAccount';
 import Home from './Test.js/testrun1';
 import CreateCart from './Test.js/testrun3';
@@ -14,6 +14,7 @@ import Electronics from './components/products/Electronics';
 import Jewelry from './components/products/Jewelry';
 import MensClothing from './components/products/clothing/MensClothing';
 import WomensClothing from './components/products/clothing/WomensClothing';
+import SingleProduct from './components/SingleProduct';
 
 function App() {
 
@@ -38,6 +39,9 @@ function App() {
             <Route
               path="/products-list"
               element={<AllProducts/>}/>
+            <Route 
+              path="/products/:productId"
+              element={<SingleProduct/>}/>
             <Route
               path="/category/electronics"
               element={<Electronics/>}/>
@@ -54,7 +58,7 @@ function App() {
               path='account/create'
               element={<CreateAccount/>}/> */}
             <Route/>
-            {/* <Route path='/ratings' element={<Rate/>}/> */}
+            <Route path='/ratings' element={<Rate/>}/>
             <Route path="/test-cart" element={<Home />}/>
             <Route path="/create-cart" element={<CreateCart/>}/>
           </Routes>

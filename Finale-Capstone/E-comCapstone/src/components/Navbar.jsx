@@ -39,6 +39,9 @@ const Navigation = () => {
                             <Link to="/">Home</Link>
                         </li>
                         <li>
+                            <Link to="/products/:productId">Single</Link>
+                        </li>
+                        <li>
                             <Link to="/category/electronics">Electronics</Link>
                         </li>
                         <li>
