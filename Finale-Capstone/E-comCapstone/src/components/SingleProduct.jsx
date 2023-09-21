@@ -31,7 +31,7 @@ const SingleProduct = () => {
           </div>
           <div className="right-single-above-details">
             <h2>{singleItem.title}</h2>
-            <p>{singleItem.rating.rate} Star Rating / {singleItem.rating.count} Reviews</p>
+            <p>{singleItem.rating?.rate} Star Rating / {singleItem.rating?.count} Reviews</p>
             <p>${singleItem.price}</p>
             <br/>
             <p>Sign up to qualify for Members Discounts</p>

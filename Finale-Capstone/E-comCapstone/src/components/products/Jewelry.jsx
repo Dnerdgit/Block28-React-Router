@@ -24,7 +24,7 @@ const Jewelry = () => {
   
     <>
       <div>
-          <h3>Jewelry</h3>
+          <h3>Jewelery</h3>
           {jewelery.map((product, key) => {
             return (
               <div key={key} className='single-product'>

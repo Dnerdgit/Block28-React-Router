@@ -1,16 +1,18 @@
 #root {
-  background-image: url('/ECommerce photos/u3h5hf5o.bmp');
-  /* max-width: 1280px;
+  
+  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center; */
+  text-align: center; 
 }
 
 /*CSS for AllProducts*/
 
 h3 {
-  color:aliceblue;
+  color:#270a5a;
   margin-left: 70px;
+  justify-content: center;
+  display: flex;
 }
 
 .all-products {
@@ -25,7 +27,7 @@ h3 {
 
 .product-comp .product {
   align-items: center;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   background-color: #9ca494;
   border-radius: 5%;
   display: flex;
@@ -87,13 +89,12 @@ input {
   align-items:flex-start;
   gap: 2rem;
   padding: 3px 1rem;
-  border-top-right-radius: 15%;
-  border-top-left-radius: 15%;
+  border-radius: 40px;
   text-decoration: none;
 }
 
 .title {
-  margin: 0px 20px 5px;
+  margin: 2px 20px 5px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   position:relative;
   justify-content:flex-start;
@@ -107,7 +108,7 @@ input {
 /*CSS for SearchBar*/
 
 .search-bar {
-  background-color: white;
+  background-color: #270a5a0b;
   font-family: "Poppins", sans-serif;
   color: #7439db;
   display: flex;
@@ -115,12 +116,13 @@ input {
   align-items:center;
   gap: 2rem;
   padding: 0 1rem;
+  margin: 5px 0px 0px 0px;
   text-decoration: none;
 }
 
 .product-search {
   padding: 10px 40px;
-  border-radius: 15%;
+  border-radius: 40px;
   align-items: stretch;
   justify-content: center;
 }
@@ -134,7 +136,7 @@ input {
 /*CSS for sign-in link*/
 
 .sign-in-link {
-  background-color: white;
+  /* background-color: rgb(164, 157, 157); */
   font-family: "Poppins", sans-serif;
   color: #5b9228;
   display: flex;
@@ -144,14 +146,16 @@ input {
   gap: 2rem;
   padding: 0 1rem;
   text-decoration: none;
-  margin: 5px 20px 5px 5px;
+  margin: 15px 20px 5px 5px;
+  border-radius: 40px;
 }
 
 a .sign-in-link{
   /* position:absolute; */
-  font-weight: 500;
-  color: #010116;
-  text-decoration: inherit;
+  font-weight: 1000;
+  color: #06bd5c;
+  text-decoration: none;
+  justify-content: flex-end;
 }
 a .sign-in-link:hover {
   color: #73a6e5;
@@ -161,13 +165,15 @@ a .sign-in-link:hover {
 /*CSS for NavBar*/
 
 .nav-header {
-  background-color: rgb(138, 7, 7);
+  background-image: url('/ECommerce photos/u3h5hf5o.bmp');
+  /* background-color: rgb(138, 7, 7); */
   color: #7439db;
   display: flex;
   justify-content: center;
   align-items: stretch;
   gap: 2rem;
   padding: 0 1rem;
+  margin: 20px 0px 0px;
 }
 
 .nav-header ul {
@@ -190,7 +196,7 @@ a .sign-in-link:hover {
 }
 
 .nav {
-  background-color: rgb(4, 177, 24);
+  background-color: rgba(55, 246, 77, 0.821);
   font-family: "Poppins", sans-serif;
   color: #7439db;
   display: flex;
@@ -227,6 +233,8 @@ a .sign-in-link:hover {
   text-decoration: underline;
 } */
 
+
+
 input[type="radio"] {
   display: none;
 }
@@ -237,6 +245,42 @@ input .star {
 }
 
 /*CSS for SingleProduct and product catergories link*/
+
+/* .single-product {
+
+  } */
+
+.left-single-image img{
+  width: 200px;
+  height: 200px;
+  box-sizing: border-box;
+  border-radius: 10%;
+  display:inline-block;
+  justify-content: center;
+  }
+
+/* .left-single-image img:hover {
+  color: #d20808;
+} */
+  
+.right-single-above-details {
+  /* display:flex; */
+  justify-content: right;
+  }
+
+  h2:hover {
+    color: #d20808;
+    text-decoration: underline;
+  }
+
+/* Button .cart-plus {
+
+  } */
+
+/* .right-single-below-details {
+
+  }  */
+
 
 
 /* CSS for CRUD/Cart component */
@@ -294,6 +338,13 @@ table td button.delete:hover {
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 } */
+
+div .sign-in-log {
+  padding: 30px;
+  border: 4px solid thick;
+  border-color: #979494;
+  background-color: #0f69a4;
+}
 
 @keyframes logo-spin {
   from {

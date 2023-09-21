@@ -51,7 +51,7 @@ const Navigation = () => {
                             <Link to="/category/women's clothing">WomensWear</Link>
                         </li>
                         <li>
-                            <Link to="/category/jewelery">Jewelry</Link>
+                            <Link to="/category/jewelery">Jewelery</Link>
                         </li>
                     </>
                 </ul>
