@@ -23,7 +23,7 @@ const MensClothing = () => {
   return (
   
     <>
-    <div>
+    <div className="product-section">
         <h3>Men's Clothing</h3>
         {mensClothing.map((product, key) => {
           return (

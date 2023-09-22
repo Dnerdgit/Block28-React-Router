@@ -3,9 +3,23 @@ import {Button, Table} from 'react-bootstrap'
 // import "bootstrap/dist/css/bootstrap.min.css"
 import Combat from "./testrun2";
 // import { useSelector } from "react-redux";
+import { Link, useNavigate} from 'react-router-dom'
 
 function Home() {
     // const users = useSelector((state) => state.users);
+    let history = useNavigate();
+
+    const handleDelete = (id) => {
+        var index = Combat.map(function(e){
+            return e.id 
+        }).indexOf(id);
+
+        Combat.splice(index, 1);
+
+        history('/test-cart');
+
+        
+    }
 
     return (
         <>
@@ -39,8 +53,11 @@ function Home() {
                                             {item.Type}
                                         </td>
                                         <td>
+                                            <Link to={'/edit'}>
                                             <Button className="edit" onClick={() => alert(item.id)}>Edit</Button>
-                                            <Button className="delete" onClick={() => alert(item.id)}>Delete</Button>
+                                            </Link>
+                                            &nbsp;
+                                            <Button className="delete" onClick={() => handleDelete(item.id)}>Delete</Button>
                                         </td>
                                     </tr>
                                 )
@@ -50,6 +67,11 @@ function Home() {
                         }
                     </tbody>
                 </Table>
+                <br>
+                </br>
+                {/* <Link className ='d-grid gap-2' to="/create">
+                    <Button size="lg">Create</Button>
+                </Link> */}
             </div>
         </Fragment>
         </>
