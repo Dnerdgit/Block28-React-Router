@@ -58,3 +58,5 @@ const Jewelry = () => {
 }
 
 export default Jewelry
+
+// onClick={() => addToCart(product)}

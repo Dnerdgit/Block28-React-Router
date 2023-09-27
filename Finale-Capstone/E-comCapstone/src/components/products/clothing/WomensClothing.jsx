@@ -58,3 +58,5 @@ const WomensClothing = () => {
 }
 
 export default WomensClothing
+
+// onClick={() => addToCart(product)}

@@ -5,8 +5,9 @@ import AllProducts from './AllProducts'
 const Searchbar = () => {
   const [searchParams, setSearchParams] = useState("");
   
-  const handleChange = value => {
+  const handleChange = (value) => {
     setSearchParams(value);
+    console.log(value);
     }
     
   return (

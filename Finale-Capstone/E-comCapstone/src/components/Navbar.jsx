@@ -1,3 +1,4 @@
+import './styles/navbar.css'
 import { Link } from 'react-router-dom'
 import Searchbar from './Searchbar'
 import { Navbar, Nav } from 'react-bootstrap'
@@ -28,6 +29,15 @@ const Navigation = () => {
                                     {/* <img className="sign-img"src="public/ECommerce photos/wjj8xils.bmp"/> */}
                             </Link>
                         </li>
+                        <li>
+                            <Link to="">
+                                <div className='cart'>
+                                    <span>
+                                        <i className='fas fa-cart-plus'></i>
+                                    </span>
+                                </div>
+                            </Link>
+                        </li>
                     </>
                 </ul>
             </nav>
@@ -38,9 +48,9 @@ const Navigation = () => {
                         <li>
                             <Link to="/">Home</Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link to="/products/:productId">Single</Link>
-                        </li>
+                        </li> */}
                         <li>
                             <Link to="/category/electronics">Electronics</Link>
                         </li>

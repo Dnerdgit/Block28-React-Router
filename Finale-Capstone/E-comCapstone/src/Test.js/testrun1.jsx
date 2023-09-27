@@ -6,8 +6,14 @@ import Combat from "./testrun2";
 import { Link, useNavigate} from 'react-router-dom'
 
 function Home() {
-    // const users = useSelector((state) => state.users);
+    
     let history = useNavigate();
+
+    const handleEdit = (id, name, type) => {
+        localStorage.setItem('Name', name)
+        localStorage.setItem('Type', type)
+        localStorage.setItem('Id', id)
+    }
 
     const handleDelete = (id) => {
         var index = Combat.map(function(e){
@@ -54,7 +60,7 @@ function Home() {
                                         </td>
                                         <td>
                                             <Link to={'/edit'}>
-                                            <Button className="edit" onClick={() => alert(item.id)}>Edit</Button>
+                                            <Button className="edit" onClick={() => handleEdit(item.id, item.Name, item.Type)}>Edit</Button>
                                             </Link>
                                             &nbsp;
                                             <Button className="delete" onClick={() => handleDelete(item.id)}>Delete</Button>
@@ -69,9 +75,9 @@ function Home() {
                 </Table>
                 <br>
                 </br>
-                {/* <Link className ='d-grid gap-2' to="/create">
+                <Link className ='d-grid gap-2' to="/create">
                     <Button size="lg">Create</Button>
-                </Link> */}
+                </Link>
             </div>
         </Fragment>
         </>

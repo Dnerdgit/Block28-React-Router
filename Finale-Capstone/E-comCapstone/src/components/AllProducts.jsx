@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { set } from 'react-hook-form';
+import Rate from '../Ratings/Rate';
+import { Link } from 'react-router-dom'
 
 export default function AllProducts() {
     const [items, setItems] = useState([]);
@@ -20,14 +22,18 @@ export default function AllProducts() {
         
     }, [])
 
+    const handleSort = (props) => {
+        const sortItems = [...filterProducts];
+    }
+
     const filterProducts = (word) => {
         if (word.trim() === "" || word.trim().length > 0) {
             word = word.trim().toLowerCase();
             return word === "" ? product : product.title.toLowerCase().includes(word);
             // setFilteringItems(items);
         } else {
-            const caseSense = items.filter((item) => 
-                item.title().toLowerCase().includes(word)
+            const caseSense = items.filter((product) => 
+                product.title().toLowerCase().includes(word)
                 )
             setFilteringItems(caseSense);
         }
@@ -45,19 +51,22 @@ export default function AllProducts() {
                 {filteringItems.map((product, key) => {
                     return (
                         <div key={key} className="product">
+                            <main key={product.id} className='product-id'>
+                            <Link to={`/products/${product.id}`}>
                             <img src={product.image}
                                  className="product-image"
                                  alt="Products for viewing"
                                  />
+                            </Link>
                             <h4>{product.title}</h4>
 
                             <li>
-                                {product.rating.rate} Star Rating / {product.rating.count} Reviews
+                                <Rate {...product.rating.rate}> Star Rating </Rate> {product.rating.count} (Customer Reviews)
                             </li>
                             <li>
                                 ${product.price}
                             </li>
-
+                            </main>
                         </div>
                     )
                    

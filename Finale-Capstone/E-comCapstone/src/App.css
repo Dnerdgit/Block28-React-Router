@@ -10,7 +10,6 @@
 
 h3 {
   color:#270a5a;
-  margin-left: 70px;
   justify-content: center;
   display: flex;
 }
@@ -18,6 +17,7 @@ h3 {
 .all-products {
   /* grid-area: all-products; */
   /* background-color: blue; */
+  text-decoration: none;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -42,6 +42,7 @@ h3 {
   padding: 10px;
   margin: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 .product img {
@@ -80,31 +81,6 @@ input {
   background-color: aqua;
 }
 
-.site-title {
-  background-color: rgb(164, 157, 157);
-  color: #270a5a;
-  display: flex;
-  /* box-shadow: 0 10px #333; */
-  justify-content:flex-start;
-  align-items:flex-start;
-  gap: 2rem;
-  padding: 3px 1rem;
-  border-radius: 40px;
-  text-decoration: none;
-}
-
-.title {
-  margin: 2px 20px 5px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  position:relative;
-  justify-content:flex-start;
-  align-items:flex-start;
-  text-decoration: none;
-  font-size: 2em;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
 /*CSS for SearchBar*/
 
 .search-bar {
@@ -133,116 +109,7 @@ input {
   justify-content: flex-end;
 } */
 
-/*CSS for sign-in link*/
 
-.sign-in-link {
-  /* background-color: rgb(164, 157, 157); */
-  font-family: "Poppins", sans-serif;
-  color: #5b9228;
-  display: flex;
-  /* box-shadow: 0 10px #333; */
-  justify-content:flex-end;
-  align-items: stretch;
-  gap: 2rem;
-  padding: 0 1rem;
-  text-decoration: none;
-  margin: 15px 20px 5px 5px;
-  border-radius: 40px;
-}
-
-a .sign-in-link{
-  /* position:absolute; */
-  font-weight: 1000;
-  color: #06bd5c;
-  text-decoration: none;
-  justify-content: flex-end;
-}
-a .sign-in-link:hover {
-  color: #73a6e5;
-  text-decoration: underline;
-}
-
-/*CSS for NavBar*/
-
-.nav-header {
-  background-image: url('/ECommerce photos/u3h5hf5o.bmp');
-  /* background-color: rgb(138, 7, 7); */
-  color: #7439db;
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 2rem;
-  padding: 0 1rem;
-  margin: 20px 0px 0px;
-}
-
-.nav-header ul {
-  font-size: 16px;
-  position: relative;
-  padding: 0;
-  margin: 5 0 0 0;
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  justify-content: space-between;
-  background-size: cover;
-}
-
-.nav-header ul li {
-  /* margin: 0 50px; */
-  position: relative;
-  justify-content:space-between;
-  background-size: cover;
-}
-
-.nav {
-  background-color: rgba(55, 246, 77, 0.821);
-  font-family: "Poppins", sans-serif;
-  color: #7439db;
-  display: flex;
-  /* box-shadow: 0 10px #333; */
-  justify-content: center;
-  align-items: stretch;
-  gap: 2rem;
-  padding: 0 1rem;
-}
-
-
-.nav ul {
-  font-size: 18px;
-  position: relative;
-  padding: 0;
-  margin: 5 0 0 0;
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  background-size: cover;
-}
-.nav ul li {
-  position: relative;
-  justify-content: center;
-  background-size: cover;
-  margin: 0px 15px;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-}
-
-/* .nav ul li:hover {
-  color: #73a6e5;
-  text-decoration: underline;
-} */
-
-
-
-input[type="radio"] {
-  display: none;
-}
-
-input .star {
-  cursor: pointer;
-  transition: color 200ms;
-}
 
 /*CSS for SingleProduct and product catergories link*/
 

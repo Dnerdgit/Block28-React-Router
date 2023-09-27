@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import PropTypes from "prop-types";
-import { FaStar } from 'react-icons/fa';
+import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
+import { AiOutlineStar } from 'react-icons/ai'
 import { useState } from 'react';
 
 const Rate = () => {
@@ -9,7 +10,7 @@ const Rate = () => {
     return (
         <div>
             {[...Array(5)].map((star, i) => {
-                const ratingValue = i + 1;
+                const ratingValue = i + 0.5;
 
                 return (
                     <label>
@@ -22,10 +23,17 @@ const Rate = () => {
                         <FaStar 
                             className="star" 
                             color={ratingValue <= (hover || rating) ? "#ffc107" : "#e4e5e9"} 
-                            size={50}
+                            size={20}
                             onMouseEnter={() => setHover(ratingValue)}
                             onMouseLeave={() => setHover(null)}
-                            />
+                            >
+                                {/* <FaStarHalfAlt className="star" 
+                                    color={ratingValue <= (hover || rating) ? "#ffc107" : "#e4e5e9"} 
+                                    size={20}
+                                    onMouseEnter={() => setHover(ratingValue)}
+                                    onMouseLeave={() => setHover(null)}/> */}
+
+                        </FaStar>
                     </label>
                 );  
             })}

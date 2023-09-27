@@ -58,3 +58,5 @@ const Electronics = () => {
 }
 
 export default Electronics;
+
+// onClick={() => addToCart(product)}
