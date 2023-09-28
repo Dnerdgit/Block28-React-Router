@@ -13,6 +13,7 @@ export default function SignInLink () {
         user, 
         isAuthenticated 
     } = useAuth0();
+    
 
     const retrieveSignin = async () => {
         try {
@@ -27,8 +28,11 @@ export default function SignInLink () {
                 }),
             });
 
-            const result = await response.json();
-            console.log(result);
+            if (response.ok) {
+                const result = await response.json();
+                console.log(result);
+            }
+
             return result;
             
             
@@ -38,7 +42,7 @@ export default function SignInLink () {
     };
     // const SignedIn = useSignIn();
 
-    const handleSubmit = async (data, event) => {
+    const handleSubmit = async (event, data ) => {
         event.preventDefault();
 
         const signInApproval = await retrieveSignin(data.username, data.password);
@@ -86,10 +90,10 @@ export default function SignInLink () {
                     </div>
                         <br/>
                         <br/>
-                        <button onClick={loginWithRedirect} type="submit">Sign In</button>
+                        <button onClick={() => loginWithRedirect} type="submit">Sign In</button>
                         <br/>
                         <br/>
-                        <a className="make-account" href="/products-list">{!isAuthenticated ? "Don't have an account Sign up!" : 'Continue'}</a>
+                        <a className="make-account" href="/products-list">{!isAuthenticated ? "Don't have an account Sign up!" : 'Continue Searching'}</a>
                     
                 </ul>
             </div>

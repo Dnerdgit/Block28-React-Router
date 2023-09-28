@@ -2,14 +2,14 @@
   
   max-width: 1280px;
   margin: 0 auto;
-  /* padding: 2rem; */
+  padding: 2rem;
   text-align: center; 
 }
 
 /*Homepage*/
 
 .home-image {
-
+  width: fit-content;
   background-image: url("public/ECommerce photos/ntt68ed2.bmp");
 }
 

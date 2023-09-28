@@ -4,6 +4,7 @@ import Searchbar from './Searchbar'
 import { Navbar, Nav } from 'react-bootstrap'
 // import Avatar from '@mui/system'
 import filterProducts  from './AllProducts'
+import AllProducts from './AllProducts'
 // import { ProductConsumer } from './CartContext'
 
 const Navigation = () => {
@@ -24,7 +25,12 @@ const Navigation = () => {
                     <li>
                         <Nav>
                             <Link className="site-search">
-                                <div className="search-bar"><Searchbar filterProducts={filterProducts}/></div>
+                                <div className="search-bar">
+                                    <Searchbar 
+                                        placeholder="Find Product"
+                                        data={AllProducts}
+                                        filterProducts={filterProducts}/>
+                                </div>
                             </Link>
                         </Nav>
                     </li>
@@ -38,8 +44,8 @@ const Navigation = () => {
                     </li>
                     <li>
                         <Nav>
-                            <Link style={{color:"mediumspringgreen"}} to="/carts">
-                                MyCart 
+                            <Link to="/carts">
+                                <i className="fas fa-shopping-cart"/>
                             </Link>
                         </Nav>
                     </li>

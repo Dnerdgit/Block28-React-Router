@@ -1,29 +1,29 @@
-section {
+/* section {
     width: 80%;
     margin: auto;
     margin-top: 5%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-}
+} */
 
-.all-products-cards {
-    width: 250px;
+/* .product-comp {
+    width: 80%;
     padding:20px;
-    /* grid-area: all-products; */
-    /* background-color: blue; */
+    grid-area: all-products;
+    background-color: blue;
     text-decoration: none;
     display: flex;
     align-items: center;
     flex-direction: column;
   }
 
-.all-products-cards:hover {
+.product-comp:hover {
     box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-  }
+  } */
   
-.product-comp .product-details {
+/* .product-comp .product-details {
     align-items: center;
     box-sizing: border-box;
     background-color: #9ca494;
@@ -34,27 +34,77 @@ section {
     margin: 5px;
     text-decoration: none;
   }
-  
-.product-details {
-    border: 2px solid cornflowerblue;
-    padding: 10px;
-    margin: 0;
-    /* box-sizing: border-box; */
-    text-decoration: none;
-  }
-  
-.product-image img {
-    width: 150px;
-    height: 200px;
-    /* box-sizing: border-box; */
-    border-radius: 10%;
-  }
+   */
 
-.product-details button {
+/* .product-details button {
     padding: 5px;
     border: none;
-   font-weight: bold;
+    font-weight: bold;
     background-color: blue;
     outline: none;
     border-radius: 2px;
+}
+
+.product-comp {
+  margin: 20px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+.product-details {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 10px;
+  margin: 40px 20px;
+}
+.product-comp:hover {
+  box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.product-image img{
+  width: 100%;
+  max-width: 300px;
+  min-height: 200px;
+  box-sizing: border-box;
+  border-radius: 10%;
+  display:block;
+  object-fit: cover;
+} */
+
+.all-products-cards {
+  margin: 20px auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: orange;
+  border-radius: 5px;
+}
+
+.product-card {
+  width: 300px;
+  height: 400px;
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow:hidden;
+  padding: 10px;
+  margin: 40px 20px;
+  background-color: aquamarine;
+}
+
+.product-image img{
+  width: 100%;
+  max-width: 300px;
+  min-height: 200px;
+  border-radius: 10%;
+  display:block;
+  object-fit: cover;
 }

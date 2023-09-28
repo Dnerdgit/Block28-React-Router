@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react';
 import { set } from 'react-hook-form';
 // import Rate from '../Ratings/Rate';
 import { Link } from 'react-router-dom'
+import SorterPage from './SorterPage'
 
-
-export default function AllProducts({item}) {
+export default function AllProducts({product}) {
     const [items, setItems] = useState([]);
     const [filteringItems, setFilteringItems] = useState([]);
 
@@ -24,15 +24,22 @@ export default function AllProducts({item}) {
         
     }, [])
 
-    const handleSort = (props) => {
+    const handleSortChange = (props) => {
         const sortItems = [...filterProducts];
+        if (props === "ascending") {
+            sortItems.sort((a, b) => a.title.localeCompare(b.title));
+          } else if (props === "descending") {
+            sortItems.sort((a, b) => b.title.localeCompare(a.title));
+        }
+        setFilteringItems(sortItems);
+    
     }
 
     const filterProducts = (word) => {
         if (word.trim() === "" || word.trim().length > 0) {
-            word = word.trim().toLowerCase();
-            return word === "" ? product : product.title.toLowerCase().includes(word);
-            // setFilteringItems(items);
+            // word = word.trim().toLowerCase();
+            // return word === "" ? product : product.title.toLowerCase().includes(word);
+            setFilteringItems(items);
         } else {
             const caseSense = items.filter((product) => 
                 product.title().toLowerCase().includes(word)
@@ -44,21 +51,19 @@ export default function AllProducts({item}) {
     
     return (
         <div className="all-products-cards">
-            {/* <div className="organized-items">
-            
-            </div> */}
+            <div className="organized-items">
+                <SorterPage onSort={handleSortChange}/>
+            </div>
             <section>
-            <div className="product-comp">
-                {/* <h3>All Products</h3> */}
-                {filteringItems.map((product, key) => {
-                    return (
-                        <div key={key} className="product-details">
+                <div className="product-card">
+                    {filteringItems.map((product, key) => (
+                        <div key={key} className="product-card">
                             <main key={product.id} className='product-id'>
                             <Link to={`/products/${product.id}`}>
                             <div className="product-image">
                                 <img src={product.image}
                                     
-                                    alt="Products for viewing"
+                                    alt={product.title}
                                     />
                              </div>      
                             </Link>
@@ -73,12 +78,9 @@ export default function AllProducts({item}) {
                             </p>
                             <button>Add to Cart</button>
                             </main>
-                        </div>
-                    )
-                   
-                })
-                }
-            </div>
+                        </div>       
+                    ))}
+                </div>
             </section>
         </div>
         
