@@ -1,9 +1,11 @@
+import './styles/products.css'
 import { useState, useEffect } from 'react';
 import { set } from 'react-hook-form';
-import Rate from '../Ratings/Rate';
+// import Rate from '../Ratings/Rate';
 import { Link } from 'react-router-dom'
 
-export default function AllProducts() {
+
+export default function AllProducts({item}) {
     const [items, setItems] = useState([]);
     const [filteringItems, setFilteringItems] = useState([]);
 
@@ -41,31 +43,35 @@ export default function AllProducts() {
     }
     
     return (
-        <div className="all-products">
-            <div className="organized-items">
+        <div className="all-products-cards">
+            {/* <div className="organized-items">
             
-            </div>
-
+            </div> */}
+            <section>
             <div className="product-comp">
-                <h3>All Products</h3>
+                {/* <h3>All Products</h3> */}
                 {filteringItems.map((product, key) => {
                     return (
-                        <div key={key} className="product">
+                        <div key={key} className="product-details">
                             <main key={product.id} className='product-id'>
                             <Link to={`/products/${product.id}`}>
-                            <img src={product.image}
-                                 className="product-image"
-                                 alt="Products for viewing"
-                                 />
+                            <div className="product-image">
+                                <img src={product.image}
+                                    
+                                    alt="Products for viewing"
+                                    />
+                             </div>      
                             </Link>
                             <h4>{product.title}</h4>
 
-                            <li>
-                                <Rate {...product.rating.rate}> Star Rating </Rate> {product.rating.count} (Customer Reviews)
-                            </li>
-                            <li>
+                            <p>
+                                {product.rating.rate} Star Rating  {product.rating.count} (Customer Reviews)
+                                {/* <Rate {...product.rating.rate}> Star Rating </Rate> {product.rating.count} (Customer Reviews) */}
+                            </p>
+                            <p>
                                 ${product.price}
-                            </li>
+                            </p>
+                            <button>Add to Cart</button>
                             </main>
                         </div>
                     )
@@ -73,6 +79,7 @@ export default function AllProducts() {
                 })
                 }
             </div>
+            </section>
         </div>
         
     )

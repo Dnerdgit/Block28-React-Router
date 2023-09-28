@@ -4,43 +4,48 @@ import Searchbar from './Searchbar'
 import { Navbar, Nav } from 'react-bootstrap'
 // import Avatar from '@mui/system'
 import filterProducts  from './AllProducts'
+// import { ProductConsumer } from './CartContext'
 
 const Navigation = () => {
   return (
 
     <>
     <Navbar>
-            <nav className="nav-header">
-                <ul>
-                    <>
-                        <li>
+        <nav className="nav-header">
+            <ul>
+                <>
+                    <li>
+                        <Nav>
                             <Link to="/" className="site-title">
                                 <div className="title">Stag's E-Commerce</div>
                             </Link>
-                        </li>
-                        <li>
+                        </Nav>
+                    </li>
+                    <li>
+                        <Nav>
                             <Link className="site-search">
                                 <div className="search-bar"><Searchbar filterProducts={filterProducts}/></div>
                             </Link>
-                        </li>
-                        <li>
+                        </Nav>
+                    </li>
+                    <li>
+                        <Nav>
                             <Link to="/auth/login" className="site-log">
-                                <div className="sign-in-link"><div>Sign In</div></div>
+                                <div className="sign-in-link">Sign In</div>
                                     {/* <img className="sign-img"src="public/ECommerce photos/wjj8xils.bmp"/> */}
                             </Link>
-                        </li>
-                        <li>
-                            <Link to="">
-                                <div className='cart'>
-                                    <span>
-                                        <i className='fas fa-cart-plus'></i>
-                                    </span>
-                                </div>
+                        </Nav>
+                    </li>
+                    <li>
+                        <Nav>
+                            <Link style={{color:"mediumspringgreen"}} to="/carts">
+                                MyCart 
                             </Link>
-                        </li>
-                    </>
-                </ul>
-            </nav>
+                        </Nav>
+                    </li>
+                </>
+            </ul>
+        </nav>
     
             <nav className="nav">
                 <ul>
@@ -48,9 +53,9 @@ const Navigation = () => {
                         <li>
                             <Link to="/">Home</Link>
                         </li>
-                        {/* <li>
-                            <Link to="/products/:productId">Single</Link>
-                        </li> */}
+                        <li>
+                            <Link to="/products-list">All Products</Link>
+                        </li>
                         <li>
                             <Link to="/category/electronics">Electronics</Link>
                         </li>

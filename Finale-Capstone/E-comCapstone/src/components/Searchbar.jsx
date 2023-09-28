@@ -1,3 +1,4 @@
+import './styles/searchbar.css'
 import React, { useState, useEffect }from 'react'
 // import { useSearchParams } from 'react-router-dom';
 import AllProducts from './AllProducts'
