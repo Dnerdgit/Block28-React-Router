@@ -3,11 +3,11 @@ import React, { useState, useEffect }from 'react'
 // import { useSearchParams } from 'react-router-dom';
 // import AllProducts from './AllProducts'
 
-const Searchbar = ({placeholder, data}) => {
-  const [searchParams, setSearchParams] = useState("");
+const Searchbar = ({placeholder, word, setWord}) => {
+  const [searchBar, setSearchBar] = useState("");
   
-  const handleChange = (value) => {
-    setSearchParams(value);
+  const handleSearchChange = (value) => {
+    setWord(value);
     console.log(value);
     }
     
@@ -19,9 +19,9 @@ const Searchbar = ({placeholder, data}) => {
             className='product-search'
             type='text'
             name='searchbar' 
-            value={searchParams} 
+            value={word} 
             placeholder={placeholder}
-            onChange={(e) => handleChange(e.target.value)} 
+            onChange={(e) => handleSearchChange(e.target.value)} 
             />
           <div className="searchIcon"></div>
       </div>

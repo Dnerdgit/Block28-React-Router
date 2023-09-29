@@ -26,10 +26,10 @@ const Navigation = () => {
                         <Nav>
                             <Link className="site-search">
                                 <div className="search-bar">
-                                    <Searchbar 
+                                    {/* <Searchbar 
                                         placeholder="Find Product"
                                         data={AllProducts}
-                                        filterProducts={filterProducts}/>
+                                        filterProducts={filterProducts}/> */}
                                 </div>
                             </Link>
                         </Nav>

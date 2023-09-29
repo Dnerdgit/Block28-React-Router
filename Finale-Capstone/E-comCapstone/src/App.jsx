@@ -19,6 +19,7 @@ import CreateCart from './components/carts/CreateCart';
 // import EditCart from './Test.js/testEdit';
 
 function App() {
+
   const [cartItems, setCartItems] = useState([])
 
   const handleAddProduct = (product) =>{
@@ -52,22 +53,22 @@ function App() {
               element={<SignIn/>}
               />
             <Route
-              path="/products-list"
-              element={<AllProducts/>}/>
+              path="/products-list" exact
+              element={<AllProducts/> }/>
             <Route 
-              path="/products/:productId"
+              path="/products/:productId" exact
               element={<SingleProduct/>}/>
             <Route
-              path="/category/electronics"
+              path="/category/electronics" exact
               element={<Electronics/>}/>
             <Route 
-              path="/category/jewelery"
+              path="/category/jewelery" exact
               element={<Jewelry/>}/>
             <Route
-              path="/category/men's clothing"
+              path="/category/men's clothing" exact
               element={<MensClothing/>}/>
             <Route
-              path="/category/women's clothing"
+              path="/category/women's clothing" exact
               element={<WomensClothing/>}/>
             {/* <Route
               path='account/create'
@@ -77,7 +78,9 @@ function App() {
             {/* <Route path='/edit' element={<EditCart/>}/>
             <Route path='/create' element={<CreateCart/>}/>
             <Route path="/test-cart" element={<Home />}/> */}
-            <Route path="/create-cart" element={<CreateCart cartItems={cartItems}/>}/>
+            <Route 
+              path="/create-cart" exact
+              element={<CreateCart cartItems={cartItems}/>}/>
 
           </Routes>
         </React.Fragment>

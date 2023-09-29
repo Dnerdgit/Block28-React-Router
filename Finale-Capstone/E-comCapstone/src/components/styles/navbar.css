@@ -3,13 +3,13 @@
 .nav-header {
     background-image: url('/ECommerce photos/u3h5hf5o.bmp');
     /* background-color: rgb(138, 7, 7); */
-    color: #7439db;
+    color: #533686;
     display: flex;
     justify-content: center;
     align-items: stretch;
-    gap: 2rem;
-    padding: 0 1rem;
-    margin: 20px 0px 0px;
+    /* gap: 2rem; */
+    /* padding: 0 1rem; */
+    /* margin: 20px 0px 0px; */
     position:sticky;
     width: 100%;
   }
@@ -35,7 +35,7 @@
   }
   
 .nav {
-    background-color: rgba(55, 246, 77, 0.821);
+    background-color: rgba(165, 2, 2, 0.415);
     font-family: "Poppins", sans-serif;
     color: #7439db;
     display: flex;
@@ -90,6 +90,12 @@
     border-radius: 40px;
   }
   
+a {
+  color: red;
+  text-decoration: none;
+}
+
+
   a .sign-in-link{
     /* position:absolute; */
     font-weight: 1000;
@@ -112,8 +118,8 @@
   }
 
 .site-title {
-    background-color: rgb(164, 157, 157);
-    color: #270a5a;
+    background-color: rgb(71, 68, 68);
+    color: #bd0000ea;
     display: flex;
     /* box-shadow: 0 10px #333; */
     justify-content:flex-start;

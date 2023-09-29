@@ -1,12 +1,15 @@
 #root {
-  
-  max-width: 1280px;
+  background-image: url("../public/ECommerce photos/Futuristic-Red-Black-Background-Design-Graphics-30694681-1.jpg");
+  /* max-width: 1280px; */
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center; 
 }
 
 /*Homepage*/
+body {
+  margin: 0;
+}
 
 .home-image {
   width: fit-content;
@@ -72,7 +75,7 @@ input {
   box-sizing: border-box;
   border-radius: 10%;
   display:inline-block;
-  justify-content: center;
+  justify-content: left;
   }
 
 /* .left-single-image img:hover {
@@ -82,6 +85,11 @@ input {
 .right-single-above-details {
   /* display:flex; */
   justify-content: right;
+  color:#d20808
+  }
+
+  .right-single-above-details p:nth-child(1) {
+    color:#d20808;
   }
 
   h2:hover {

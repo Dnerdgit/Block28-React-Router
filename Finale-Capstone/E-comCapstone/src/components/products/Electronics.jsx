@@ -46,10 +46,11 @@ const Electronics = () => {
                       onClick={() => alert(product.id)} 
                       variant='success'>Add to Cart</Button>
                     <br/>
-                    <div className="right-single-below-details">
-                      <p>{product.description}</p>
-                    </div>
                   </div>
+                  <div className="right-single-below-details">
+                      <p>{product.description}</p>
+                  </div>
+                  
               </div>
             )
             })
