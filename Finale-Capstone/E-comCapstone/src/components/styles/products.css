@@ -51,7 +51,7 @@ select {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 33.3%));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 30%));
   justify-content: center;
   margin: 10px;
 }
@@ -94,5 +94,5 @@ button.add-to {
 }
 
 button.add-to:hover {
-  background-color: rgb(133, 14, 14);
+  background-color:green;
 }

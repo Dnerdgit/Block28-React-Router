@@ -6,11 +6,10 @@ import { Link } from 'react-router-dom'
 import SorterPage from './SorterPage'
 import Searchbar from './Searchbar';
 
-export default function AllProducts({}) {
+export default function AllProducts({handleAddProduct}) {
     const [word, setWord] = useState("")
     const [items, setItems] = useState([]);
-    // const [filteringItems, setFilteringItems] = useState([]);
-
+    
     useEffect(() => {
         const fetchItems = async () => {
             try {
@@ -44,12 +43,15 @@ export default function AllProducts({}) {
        <>
             <div className="organized-items">
                     <SorterPage onSort={handleSortChange}/>
+                    <br/>
                     <Searchbar 
                         placeholder="Find Product"
                         data={AllProducts}
                         word={word} setWord={setWord}
                         />
-                </div>        
+                </div> 
+                <br/>
+                <br/>       
           
             <div className='all-prods'>
                 <section className='container'>
@@ -75,7 +77,7 @@ export default function AllProducts({}) {
                                 ${product.price}
                             </li>
                             <br/>
-                            <button className='add-to'>Add to Cart</button>
+                            <button onClick={handleAddProduct(filteringItems)} className='add-to'>Add to Cart</button>
                             </main>
                         </div>       
                     ))}
@@ -89,6 +91,6 @@ export default function AllProducts({}) {
 }
 
 
-
+//onClick={handleAddProduct(filteringItems)}
  // <main key={product.id} className="all-items"/>
                             // <li>{product.title}</li>

@@ -19,7 +19,7 @@ import CreateCart from './components/carts/CreateCart';
 // import EditCart from './Test.js/testEdit';
 
 function App() {
-
+  const { productItems } = data;
   const [cartItems, setCartItems] = useState([])
 
   const handleAddProduct = (product) =>{
@@ -29,7 +29,7 @@ function App() {
       {...ProductExist, quantity: ProductExist.quantity + 1}: item )
       );
     } else {
-      setCartItems([])
+      setCartItems([...cartItems, {...product, quantity: 1}]);
     }
   }
  
@@ -39,7 +39,7 @@ function App() {
       <Navigation />
       <AuthProvider>
         <React.Fragment>
-          <Routes>
+          <Routes productItems={productItems} cartItems={cartItems} handleAddProduct={handleAddProduct}>
             <Route
               path="/"
               element={
@@ -54,7 +54,7 @@ function App() {
               />
             <Route
               path="/products-list" exact
-              element={<AllProducts/> }/>
+              element={<AllProducts /> }/>
             <Route 
               path="/products/:productId" exact
               element={<SingleProduct/>}/>

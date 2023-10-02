@@ -1,9 +1,6 @@
 #root {
   background-image: url("../public/ECommerce photos/Futuristic-Red-Black-Background-Design-Graphics-30694681-1.jpg");
-  /* max-width: 1280px; */
   margin: 0 auto;
-  /* padding: 2rem; */
-  /* text-align: center;  */
 }
 
 /*Homepage*/
@@ -17,51 +14,10 @@ body {
 }
 
 /*CSS for AllProducts*/
-
-h3 {
-  color:#d20808;
-  justify-content: center;
-  display: flex;
-}
-
-input {
-  margin: 0 12.5px ;
-  /* width: 83.5%; */
-  height: 100%;
-  /* background: transparent; */
-  /* border: none; */
-  /* outline: none; */
-  /* border: 2px solid rgba(255, 255, 255, 0.2); */
-  border-radius: 40px;
-  font-size: 16px;
-  color: rgb(54, 28, 28);
-  padding: 20px 0px;
-}
-
-/* .layout {
-  width: 100%;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: 'sign-in'
-                       'all-products', 'all-products';
-} */
-
 .sign-in {
   grid-area: sign-in;
-  background-color: aqua;
+  background-color: green;
 }
-
-
-
-/* a .sign-img {
-  width: 30px;
-  margin: 0;
-  justify-content: flex-end;
-} */
-
-
 
 /*CSS for SingleProduct and product catergories link*/
 
@@ -104,11 +60,6 @@ p {
   /* width: 300px; */
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
-  h2:hover {
-    color: #d20808;
-    text-decoration: underline;
-  }
 
 /* Button .cart-plus {
 
@@ -158,25 +109,6 @@ table td button.delete {
 
 table td button.delete:hover {
   background-color: rgb(133, 14, 14);
-}
-/* .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-} */
-
-div .sign-in-log {
-  padding: 30px;
-  border: 4px solid thick;
-  border-color: #979494;
-  background-color: #0f69a4;
 }
 
 @keyframes logo-spin {

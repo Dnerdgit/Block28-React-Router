@@ -1,7 +1,7 @@
 /*CSS for NavBar*/
 
 .nav-header {
-    background-image: url('/ECommerce photos/u3h5hf5o.bmp');
+    background-image: url('/ECommerce photos/RedMoon.jpg');
     /* background-color: rgb(138, 7, 7); */
     color: #533686;
     display: flex;
@@ -36,7 +36,7 @@
   
 .nav {
     /* background-color: rgba(165, 2, 2, 0.415); */
-    background-image: "/ECommerce photos/Futuristic-Red-Black-Background-Design-Graphics-30694681-1.jpg";
+    background-image: url("/ECommerce photos/AbstartRed.webp");
     font-family: "Poppins", sans-serif;
     color: #7439db;
     display: flex;
@@ -79,7 +79,7 @@
 .sign-in-link {
     /* background-color: rgb(164, 157, 157); */
     font-family: "Poppins", sans-serif;
-    color: #5b9228;
+    color: red;
     display: flex;
     /* box-shadow: 0 10px #333; */
     justify-content:flex-end;
@@ -100,12 +100,12 @@ a {
   a .sign-in-link{
     /* position:absolute; */
     font-weight: 1000;
-    color: #06bd5c;
+    color: red;
     text-decoration: none;
     justify-content: flex-end;
   }
   a .sign-in-link:hover {
-    color: #73a6e5;
+    color: green;
     text-decoration: underline;
   }
   
@@ -119,10 +119,10 @@ a {
   }
 
 .site-title {
-    background-color: rgb(71, 68, 68);
+    background-color: rgb(20, 1, 1);
     color: #bd0000ea;
     display: flex;
-    /* box-shadow: 0 10px #333; */
+    box-shadow: 0 10px #2321219f;
     justify-content:flex-start;
     align-items:flex-start;
     gap: 2rem;

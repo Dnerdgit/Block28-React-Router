@@ -1,19 +1,24 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSignIn } from 'react-auth-kit';
 // import { useForm } from 'react-hook-form'
 // import { useNavigate } from 'react-router- dom'
 import { useAuth0 } from '@auth0/auth0-react';
+import '../styles/signin.css'
 
 export default function SignInLink () {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const { 
-        loginWithPopup, 
+        error,
+        loginWithPopup,
+        getIdTokenClaims,
+        getAccessTokenSilently, 
         loginWithRedirect, 
         user, 
         isAuthenticated 
     } = useAuth0();
     
+   
 
     const retrieveSignin = async () => {
         try {
@@ -30,29 +35,40 @@ export default function SignInLink () {
 
             if (response.ok) {
                 const result = await response.json();
+                const token = await getAccessTokenSilently(result); 
                 console.log(result);
-            }
 
-            return result;
+                localStorage.setItem("token", token)
+                return(error);
+            }
             
             
         } catch (error) {
             console.log(error);
         }
     };
+
+
+    useEffect(() => {
+        const userId = localStorage.getItem("token");
+        if (userId) {
+            isAuthenticated;
+        }
+    })
+
     // const SignedIn = useSignIn();
 
-    const handleSubmit = async (event, data ) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
-        const signInApproval = await retrieveSignin(data.username, data.password);
+        const signInApproval = await retrieveSignin(username, password);
         console.log(signInApproval);
     }
  
 
     return (
         <div className="sign-in-log">
-            <h3 className="on-sign">Sign In</h3>
+            <h1 className="on-sign">Sign In</h1>
             <form onSubmit={handleSubmit} className="sign-in-form">
             <div>
                 <ul>
@@ -90,7 +106,7 @@ export default function SignInLink () {
                     </div>
                         <br/>
                         <br/>
-                        <button onClick={() => loginWithRedirect} type="submit">Sign In</button>
+                        <button className='login' onClick={() => loginWithRedirect} type="submit">Sign In</button>
                         <br/>
                         <br/>
                         <a className="make-account" href="/products-list">{!isAuthenticated ? "Don't have an account Sign up!" : 'Continue Searching'}</a>

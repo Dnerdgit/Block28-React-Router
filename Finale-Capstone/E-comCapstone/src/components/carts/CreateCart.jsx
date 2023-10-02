@@ -1,9 +1,14 @@
 import React from 'react'
+import "../styles/cart.css"
 
 const CreateCart = ({cartItems}) => {
   return (
     <div className="cart-items">
-        <div className="cart-items-header">Cart Items</div>
+        <div className="cart-items-header">
+          <header className='cart-title'>
+          Cart Items
+          </header>
+          </div>
 
         {cartItems.length === 0 && (
             <div className="cart-items-empty"> No Items are added</div>    
