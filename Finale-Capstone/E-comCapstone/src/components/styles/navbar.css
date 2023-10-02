@@ -35,7 +35,8 @@
   }
   
 .nav {
-    background-color: rgba(165, 2, 2, 0.415);
+    /* background-color: rgba(165, 2, 2, 0.415); */
+    background-image: "/ECommerce photos/Futuristic-Red-Black-Background-Design-Graphics-30694681-1.jpg";
     font-family: "Poppins", sans-serif;
     color: #7439db;
     display: flex;
@@ -69,10 +70,10 @@
     font-weight: bold;
   }
   
-  /* .nav ul li:hover {
-    color: #73a6e5;
+  .nav ul li:hover {
+    color: #930000;
     text-decoration: underline;
-  } */
+  }
 
 /*CSS for sign-in link*/
 .sign-in-link {

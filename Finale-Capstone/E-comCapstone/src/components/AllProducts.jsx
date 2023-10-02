@@ -52,11 +52,11 @@ export default function AllProducts({}) {
     // }
 
     const filteringItems = word ? items.filter((product) => 
-                product.title.toLowerCase().includes(word.toLowerCase())
+                product.title.toLowerCase().includes(word.toLowerCase)
                 ) : items;
     
     return (
-        <>
+        <div className='all-prods'>
             <div className="organized-items">
                     <SorterPage onSort={handleSortChange}/>
                     <Searchbar 
@@ -65,38 +65,41 @@ export default function AllProducts({}) {
                         word={word} setWord={setWord}
                         />
                 </div>        
-            <div className="all-products-cards">
+            {/* <div className="all-products-cards"> */}
             
-            <section>
+                <section className='container'>
                 
                     {filteringItems.map((product, key) => (
-                        <div key={key} className="product-card">
+                        // <div key={key} className="product-card">
                             <main key={product.id} className='product-id'>
                             <Link to={`/products/${product.id}`}>
-                            <div className="product-image">
+                           
                                 <img src={product.image}
-                                    
+                                    className='product-image'
                                     alt={product.title}
                                     />
-                             </div>      
+                            
                             </Link>
                             <h4>{product.title}</h4>
 
-                            <p>
-                                {product.rating.rate} Star Rating  {product.rating.count} (Customer Reviews)
+                            <li>
+                                {product.rating.rate} Star Rating
+                                <br/>
+                                {product.rating.count} (Customer Reviews)
                                 {/* <Rate {...product.rating.rate}> Star Rating </Rate> {product.rating.count} (Customer Reviews) */}
-                            </p>
-                            <p>
+                            </li>
+                            <li>
                                 ${product.price}
-                            </p>
-                            <button>Add to Cart</button>
+                            </li>
+                            <br/>
+                            <button className='add-to'>Add to Cart</button>
                             </main>
-                        </div>       
+                        // </div>       
                     ))}
                 
-            </section>
-            </div>
-     </>
+                </section>
+            {/* </div> */}
+     </div>
     )
 
 }

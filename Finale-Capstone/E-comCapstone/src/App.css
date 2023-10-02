@@ -3,7 +3,7 @@
   /* max-width: 1280px; */
   margin: 0 auto;
   /* padding: 2rem; */
-  text-align: center; 
+  /* text-align: center;  */
 }
 
 /*Homepage*/
@@ -13,13 +13,13 @@ body {
 
 .home-image {
   width: fit-content;
-  background-image: url("public/ECommerce photos/ntt68ed2.bmp");
+  background-image: url("/ECommerce photos/ntt68ed2.bmp");
 }
 
 /*CSS for AllProducts*/
 
 h3 {
-  color:#270a5a;
+  color:#d20808;
   justify-content: center;
   display: flex;
 }
@@ -70,6 +70,7 @@ input {
   } */
 
 .left-single-image img{
+  padding: 5px;
   width: 200px;
   height: 200px;
   box-sizing: border-box;
@@ -83,14 +84,26 @@ input {
 } */
   
 .right-single-above-details {
-  /* display:flex; */
+  display:flex;
   justify-content: right;
   color:#d20808
   }
 
-  .right-single-above-details p:nth-child(1) {
+  /* .right-single-above-details p:nth-child(1) {
     color:#d20808;
-  }
+  } */
+
+.right-single-below-details {
+  color:#d20808;
+  /* justify-content: right; */
+  text-align: center;
+}
+
+p {
+  /* text-wrap:stable; */
+  /* width: 300px; */
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
   h2:hover {
     color: #d20808;
@@ -100,10 +113,6 @@ input {
 /* Button .cart-plus {
 
   } */
-
-/* .right-single-below-details {
-
-  }  */
 
 
 
