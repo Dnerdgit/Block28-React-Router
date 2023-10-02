@@ -5,7 +5,7 @@ import { AuthProvider } from 'react-auth-kit'
 import MainPage from './components/MainPage';
 import Navigation from './components/Navbar'
 import AllProducts from './components/AllProducts';
-import SignIn from './UserData/SignIn'
+import SignIn from './components/UserData/SignIn'
 // import Rate from './Ratings/Rate';
 // import CreateAccount from './components/CreateAccount';
 import Electronics from './components/products/Electronics';

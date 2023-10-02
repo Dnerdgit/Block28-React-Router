@@ -1,5 +1,5 @@
 import React from 'react'
-import SignIn from '../UserData/SignIn'
+import SignIn from './UserData/SignIn'
 import AllProducts from './AllProducts'
 // import Navbar from './Navbar'
 import Home from './Home'
