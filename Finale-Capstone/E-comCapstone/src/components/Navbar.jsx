@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom'
 import Searchbar from './Searchbar'
 import { Navbar, Nav } from 'react-bootstrap'
 // import Avatar from '@mui/system'
-import filterProducts  from './AllProducts'
-import AllProducts from './AllProducts'
 // import { ProductConsumer } from './CartContext'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
 const Navigation = () => {
   return (
@@ -44,8 +43,9 @@ const Navigation = () => {
                     </li>
                     <li>
                         <Nav>
-                            <Link to="/carts">
-                                <i className="fas fa-shopping-cart"/>
+                            <Link to="/carts"
+                                className='cart-place'>
+                                <i className="fas fa-shopping-cart" title="Cart"></i>
                             </Link>
                         </Nav>
                     </li>

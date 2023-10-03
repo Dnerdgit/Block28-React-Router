@@ -19,7 +19,7 @@ import CreateCart from './components/carts/CreateCart';
 // import EditCart from './Test.js/testEdit';
 
 function App() {
-  // const { productItems } = data;
+  const { productItems } = fetch('https://fakestoreapi.com/products');
   const [cartItems, setCartItems] = useState([])
 
   const handleAddProduct = (product) =>{
@@ -54,7 +54,8 @@ function App() {
       <Navigation />
       <AuthProvider>
         <React.Fragment>
-          <Routes 
+          <Routes
+            productItems={productItems} 
             cartItems={cartItems} 
             handleAddProduct={handleAddProduct}
             handleRemoveProduct={handleRemoveProduct}>
@@ -72,7 +73,9 @@ function App() {
               />
             <Route
               path="/products-list" exact
-              element={<AllProducts handleAddProduct={handleAddProduct}/> }/>
+              element={<AllProducts 
+              productItems={productItems} 
+              handleAddProduct={handleAddProduct}/> }/>
             <Route 
               path="/products/:productId" exact
               element={<SingleProduct/>}/>
@@ -97,8 +100,12 @@ function App() {
             <Route path='/create' element={<CreateCart/>}/>
             <Route path="/test-cart" element={<Home />}/> */}
             <Route 
-              path="/create-cart" exact
-              element={<CreateCart cartItems={cartItems}/>}/>
+              path="/carts" exact
+              element={<CreateCart 
+              cartItems={cartItems}
+              handleAddProduct={handleAddProduct}
+              handleRemoveProduct={handleRemoveProduct}
+            />}/>
 
           </Routes>
         </React.Fragment>

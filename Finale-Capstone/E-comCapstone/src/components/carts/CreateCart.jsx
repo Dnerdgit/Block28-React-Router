@@ -9,11 +9,11 @@ const CreateCart = ({cartItems, handleAddProduct, handleRemoveProduct}) => {
           Cart Items
           </header>
         </div>
-
+        <br />
         {cartItems.length === 0 && (
             <div className="cart-items-empty"> No Items are added</div>    
         )}
-            {cartItems.map(() => (
+            {cartItems.map((item) => (
               <>
                 <div key={item.id} className="cart-items-list">
                     <img 
