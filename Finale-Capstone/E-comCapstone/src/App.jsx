@@ -19,7 +19,7 @@ import CreateCart from './components/carts/CreateCart';
 // import EditCart from './Test.js/testEdit';
 
 function App() {
-  const { productItems } = data;
+  // const { productItems } = data;
   const [cartItems, setCartItems] = useState([])
 
   const handleAddProduct = (product) =>{
@@ -32,14 +32,32 @@ function App() {
       setCartItems([...cartItems, {...product, quantity: 1}]);
     }
   }
- 
 
+  const handleRemoveProduct = (product) =>{
+    const ProductExist = cartItems.find((item) => item.id === product.id);
+    if(ProductExist.quantity === 1){
+      setCartItems(cartItems.filter((item) => item.id !== product.id))
+    } else {
+      setCartItems(
+        cartItems.map((item) => 
+          item.id === product.id 
+          ? { ...ProductExist, quantity: ProductExist.quantity -1} 
+          : item
+        )
+      );
+    }
+  };
+ 
+  // productItems={productItems}
   return (
     <>
       <Navigation />
       <AuthProvider>
         <React.Fragment>
-          <Routes productItems={productItems} cartItems={cartItems} handleAddProduct={handleAddProduct}>
+          <Routes 
+            cartItems={cartItems} 
+            handleAddProduct={handleAddProduct}
+            handleRemoveProduct={handleRemoveProduct}>
             <Route
               path="/"
               element={
@@ -54,7 +72,7 @@ function App() {
               />
             <Route
               path="/products-list" exact
-              element={<AllProducts /> }/>
+              element={<AllProducts handleAddProduct={handleAddProduct}/> }/>
             <Route 
               path="/products/:productId" exact
               element={<SingleProduct/>}/>
