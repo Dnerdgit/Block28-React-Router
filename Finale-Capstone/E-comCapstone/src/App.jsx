@@ -84,19 +84,29 @@ function App() {
               handleAddProduct={handleAddProduct}/> }/>
             <Route 
               path="/products/:productId" exact
-              element={<SingleProduct/>}/>
+              element={<SingleProduct
+              productItems={productItems} 
+              handleAddProduct={handleAddProduct}/>}/>
             <Route
               path="/category/electronics" exact
-              element={<Electronics/>}/>
+              element={<Electronics
+              productItems={productItems} 
+              handleAddProduct={handleAddProduct}/>}/>
             <Route 
               path="/category/jewelery" exact
-              element={<Jewelry/>}/>
+              element={<Jewelry
+              productItems={productItems} 
+              handleAddProduct={handleAddProduct}/>}/>
             <Route
               path="/category/men's clothing" exact
-              element={<MensClothing/>}/>
+              element={<MensClothing
+              productItems={productItems} 
+              handleAddProduct={handleAddProduct}/>}/>
             <Route
               path="/category/women's clothing" exact
-              element={<WomensClothing/>}/>
+              element={<WomensClothing
+              productItems={productItems} 
+              handleAddProduct={handleAddProduct}/>}/>
             <Route
               path='account/create'
               element={<CreateAccount/>}/>

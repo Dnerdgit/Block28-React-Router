@@ -3,7 +3,7 @@ import React from 'react'
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 
-const WomensClothing = () => {
+const WomensClothing = ({handleAddProduct}) => {
     const [womensClothing, setWomensClothing] = useState([]);
   
     useEffect(() => {
@@ -42,9 +42,10 @@ const WomensClothing = () => {
                   <p>Sign up to qualify for Members Discounts</p>
                   <br/>
                   <br/>
-                  <Button className='cart-plus' 
-                    onClick={() => alert(product.id)} 
-                    variant='success'>Add to Cart</Button>
+                  <Button 
+                    onClick={() => handleAddProduct(product)} 
+                    className='cart-plus'>Add to Cart
+                    </Button>
                   <br/>
                 </div>
                 <div className="right-single-below-details">

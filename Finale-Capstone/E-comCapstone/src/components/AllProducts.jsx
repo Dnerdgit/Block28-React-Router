@@ -77,7 +77,10 @@ export default function AllProducts({handleAddProduct}) {
                                 ${product.price}
                             </li>
                             <br/>
-                            <button onClick={() => handleAddProduct(product)} className='add-to'>Add to Cart</button>
+                            <button 
+                                onClick={() => handleAddProduct(product)} 
+                                className='add-to'>Add to Cart
+                            </button>
                             </main>
                         </div>       
                     ))}
