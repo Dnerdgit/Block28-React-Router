@@ -9,8 +9,20 @@ body {
 }
 
 .home-image {
-  width: fit-content;
-  background-image: url("/ECommerce photos/ntt68ed2.bmp");
+  /* margin: 10px 100px; */
+  margin-left: 200px;
+  padding: 30px 300px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(186, 1, 1, 0.042);
+  /* border:3px solid red; */
+  border-radius: 80%;
+  height:500px;
+  width: 500px;
+  object-fit: contain;
+  overflow: hidden;
+  
 }
 
 /*CSS for AllProducts*/

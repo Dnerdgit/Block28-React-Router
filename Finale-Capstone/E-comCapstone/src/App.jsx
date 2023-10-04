@@ -2,12 +2,13 @@ import './App.css';
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom'
 import { AuthProvider } from 'react-auth-kit'
-import MainPage from './components/MainPage';
+// import MainPage from './components/MainPage';
+import Home from './components/Home'
 import Navigation from './components/Navbar'
 import AllProducts from './components/AllProducts';
 import SignIn from './components/UserData/SignIn'
 // import Rate from './Ratings/Rate';
-// import CreateAccount from './components/CreateAccount';
+import CreateAccount from './components/CreateAccount';
 import Electronics from './components/products/Electronics';
 import Jewelry from './components/products/Jewelry';
 import MensClothing from './components/products/clothing/MensClothing';
@@ -16,7 +17,12 @@ import SingleProduct from './components/SingleProduct';
 
 // import Home from './Test.js/testrun1';
 import CreateCart from './components/carts/CreateCart';
+import Checkout from './components/Checkout';
 // import EditCart from './Test.js/testEdit';
+
+
+
+
 
 function App() {
   const { productItems } = fetch('https://fakestoreapi.com/products');
@@ -63,7 +69,7 @@ function App() {
               path="/"
               element={
                 <>
-                <MainPage/>
+                <Home/>
                 </>
               }
               />
@@ -91,9 +97,9 @@ function App() {
             <Route
               path="/category/women's clothing" exact
               element={<WomensClothing/>}/>
-            {/* <Route
+            <Route
               path='account/create'
-              element={<CreateAccount/>}/> */}
+              element={<CreateAccount/>}/>
             <Route/>
             {/* <Route path='/ratings' element={<Rate/>}/> */}
             {/* <Route path='/edit' element={<EditCart/>}/>
@@ -106,6 +112,11 @@ function App() {
               handleAddProduct={handleAddProduct}
               handleRemoveProduct={handleRemoveProduct}
             />}/>
+
+
+            <Route 
+              path="/checkout" exact
+              element={<Checkout/>}/>
 
           </Routes>
         </React.Fragment>

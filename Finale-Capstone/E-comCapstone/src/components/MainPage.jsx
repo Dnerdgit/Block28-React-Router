@@ -7,7 +7,7 @@ import Home from './Home'
 const MainPage = () => {
   return (
     <React.Fragment>
-        <section>
+        {/* <section> */}
             <div className="layout">
                 <div className="home-screen">
                     <Home/>
@@ -15,11 +15,11 @@ const MainPage = () => {
                 {/* <div className="sign-in">
                     <SignIn/>
                 </div> */}
-                <div className="all-products">
+                {/* <div className="all-products">
                     <AllProducts/>
-                </div>
+                </div> */}
             </div>
-        </section>
+        {/* </section> */}
     </React.Fragment>
   )
 }
