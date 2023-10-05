@@ -2,7 +2,6 @@ import './App.css';
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom'
 import { AuthProvider } from 'react-auth-kit'
-// import MainPage from './components/MainPage';
 import Home from './components/Home'
 import Navigation from './components/Navbar'
 import AllProducts from './components/AllProducts';
@@ -14,13 +13,8 @@ import Jewelry from './components/products/Jewelry';
 import MensClothing from './components/products/clothing/MensClothing';
 import WomensClothing from './components/products/clothing/WomensClothing';
 import SingleProduct from './components/SingleProduct';
-
-// import Home from './Test.js/testrun1';
 import CreateCart from './components/carts/CreateCart';
 import Checkout from './components/Checkout';
-// import EditCart from './Test.js/testEdit';
-
-
 
 
 
@@ -67,11 +61,7 @@ function App() {
             handleRemoveProduct={handleRemoveProduct}>
             <Route
               path="/"
-              element={
-                <>
-                <Home/>
-                </>
-              }
+              element={<Home/>}
               />
             <Route 
               path="/auth/login" 
@@ -108,7 +98,7 @@ function App() {
               productItems={productItems} 
               handleAddProduct={handleAddProduct}/>}/>
             <Route
-              path='account/create'
+              path='/account/create'
               element={<CreateAccount/>}/>
             <Route/>
             {/* <Route path='/ratings' element={<Rate/>}/> */}

@@ -50,6 +50,7 @@ const CreateCart = ({cartItems, handleAddProduct, handleRemoveProduct}) => {
             ${totalPrice}
           </div>
       </div>
+      <button></button>
     </div>
     
   );
