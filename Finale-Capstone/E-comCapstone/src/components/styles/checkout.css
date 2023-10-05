@@ -1,4 +1,4 @@
-/* .checkout-header {
+.checkout-header {
     padding-bottom: 15px;
     display:flex;
     justify-content: space-around;
@@ -9,6 +9,7 @@
 
 .checkout-title {
     margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 1.2rem;
     font-weight: bold;
     font-family:fantasy;
@@ -20,8 +21,36 @@
 
 .checkout-page {
     margin: 30px auto;
-    width: 50%;
+    width: 80%;
     background-color: rgba(173, 1, 1, 0.133);
     border: 2px solid red;
     border-radius: 5px;
-} */
+}
+
+.form-control {
+    padding-left: 20px;
+}
+
+.form-label {
+    color: red;
+}
+
+h6 {
+    color: red;
+    font-size: 12px;
+}
+
+button {
+    font-weight: bold;
+    margin-top: 12px;
+    margin-left: 60px;
+    padding:5px;
+    cursor: pointer;
+    background-color: red;
+    border: 3px solid rgb(11, 0, 0);
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color:green;
+  }
