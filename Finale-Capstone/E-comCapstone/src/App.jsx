@@ -54,7 +54,7 @@ function App() {
     }
   };
  
-  // productItems={productItems}
+ 
   return (
     <>
       <Navigation />

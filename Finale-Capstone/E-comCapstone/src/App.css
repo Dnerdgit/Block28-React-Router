@@ -9,20 +9,16 @@ body {
 }
 
 .home-image {
-  /* margin: 10px 100px; */
-  margin-left: 200px;
-  padding: 30px 300px;
+  margin: 150px auto;
+  padding: 30px 200px;
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
   background-color: rgba(186, 1, 1, 0.042);
-  /* border:3px solid red; */
-  border-radius: 80%;
-  height:500px;
-  width: 500px;
+  /* border-radius: 90%; */
+  height:300px;
+  width: 50%;
   object-fit: contain;
-  overflow: hidden;
-  
 }
 
 /*CSS for AllProducts*/

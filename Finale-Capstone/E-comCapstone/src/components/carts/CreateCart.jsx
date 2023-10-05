@@ -6,26 +6,25 @@ const CreateCart = ({cartItems, handleAddProduct, handleRemoveProduct}) => {
   const totalPrice = cartItems.reduce((price, item) => price + item.quantity * item.price, 0);
 
   return (
-    <>
-      <div className="cart-items">
+    <div className="cart-items">
           <div className="cart-items-header">
-            <header className='cart-title'>
-            Cart Items
-            </header>
+            <header className='cart-title'>Cart Items</header>
           </div>
+
           <br />
           {cartItems.length === 0 && (
               <div className="cart-items-empty"> No Items are added</div>    
           )}
-              {cartItems.map((item) => (
-                <>
-                  <div key={item.id} className="cart-items-list">
+              {cartItems.map((item, key) => (
+                
+                <div key={item.id} className="cart-items-list">
                       <img 
                           src={item.image} 
                           alt={item.title} 
-                          className="cart-items-image" />
-                  </div>
-                  <div className="cart-items-name">{item.name}</div>
+                          className="cart-items-image" 
+                          />
+                  
+                  <div className="cart-items-title">{item.title}</div>
                   <div className="cart-items-function">
                     <button 
                       className="cart-items-add" 
@@ -41,16 +40,18 @@ const CreateCart = ({cartItems, handleAddProduct, handleRemoveProduct}) => {
                   <div className="cart-item-price">
                     {item.quantity} * {item.price}
                   </div>
-                </>
+                </div>
+              
               ))}
-      </div>
-      <div className="cart-item-total-price-name">
+      
+      <div className="cart-items-total-price-name">
           Total Price
           <div className="cart-items-total-price">
             ${totalPrice}
           </div>
       </div>
-    </>
+    </div>
+    
   );
 };
 
