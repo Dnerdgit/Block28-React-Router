@@ -7,7 +7,7 @@ import Navigation from './components/Navbar'
 import AllProducts from './components/AllProducts';
 import SignIn from './components/UserData/SignIn'
 // import Rate from './Ratings/Rate';
-import CreateAccount from './components/CreateAccount';
+import CreateAcc from './components/UserData/CreateAcc';
 import Electronics from './components/products/Electronics';
 import Jewelry from './components/products/Jewelry';
 import MensClothing from './components/products/clothing/MensClothing';
@@ -47,6 +47,9 @@ function App() {
       );
     }
   };
+  const handleCartClearance = () => {
+    setCartItems([])
+  }
  
  
   return (
@@ -58,7 +61,8 @@ function App() {
             productItems={productItems} 
             cartItems={cartItems} 
             handleAddProduct={handleAddProduct}
-            handleRemoveProduct={handleRemoveProduct}>
+            handleRemoveProduct={handleRemoveProduct}
+            handleCartClearance={handleCartClearance}>
             <Route
               path="/"
               element={<Home/>}
@@ -99,7 +103,7 @@ function App() {
               handleAddProduct={handleAddProduct}/>}/>
             <Route
               path='/account/create'
-              element={<CreateAccount/>}/>
+              element={<CreateAcc/>}/>
             <Route/>
             {/* <Route path='/ratings' element={<Rate/>}/> */}
             {/* <Route path='/edit' element={<EditCart/>}/>
@@ -111,6 +115,7 @@ function App() {
               cartItems={cartItems}
               handleAddProduct={handleAddProduct}
               handleRemoveProduct={handleRemoveProduct}
+              handleCartClearance={handleCartClearance}
             />}/>
 
 

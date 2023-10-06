@@ -54,6 +54,7 @@ input {
 button.login {
     font-weight: bold;
     margin-top: 12px;
+    margin-right: 60px;
     padding: 10px 20px;
     cursor: pointer;
     background-color: red;

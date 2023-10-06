@@ -49,21 +49,27 @@ export default function SignInLink () {
     };
 
 
-    useEffect(() => {
-        const userId = localStorage.getItem("token");
-        if (userId) {
-            isAuthenticated;
-        }
-    })
+            useEffect(() => {
+                const userId = localStorage.getItem("token");
+                if (userId) {
+                    isAuthenticated;
+                }
+            })
 
-    // const SignedIn = useSignIn();
+    // const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
 
         const signInApproval = await retrieveSignin(username, password);
         console.log(signInApproval);
-    }
+        
+        // if (signInApproval.ok) {
+        //     navigate("/products-list")
+        // } else {
+        //     alert("Invalid Entry")
+        // }
+    } 
  
 
     return (
@@ -109,7 +115,7 @@ export default function SignInLink () {
                         <button className='login' onClick={() => loginWithRedirect} type="submit">Sign In</button>
                         <br/>
                         <br/>
-                        <a className="make-account" href="/products-list">{!isAuthenticated ? "Don't have an account Sign up!" : 'Continue Searching'}</a>
+                        <a className="make-account" href="/account/create">{!isAuthenticated ? "Don't have an account Sign up!" : 'Continue'}</a>
                     
                 </ul>
             </div>
@@ -117,3 +123,5 @@ export default function SignInLink () {
         </div>
     )
 } 
+
+

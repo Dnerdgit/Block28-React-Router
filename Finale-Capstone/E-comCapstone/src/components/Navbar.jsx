@@ -45,7 +45,7 @@ const Navigation = () => {
                         <Nav>
                             <Link to="/carts"
                                 className='cart-place'>
-                                <i className="fas fa-shopping-cart" title="Cart">Cart</i>
+                                <div className="shopping-cart" title="Cart">Cart</div>
                             </Link>
                         </Nav>
                     </li>

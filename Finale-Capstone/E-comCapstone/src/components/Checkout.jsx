@@ -6,6 +6,31 @@ import React from 'react'
 
 
 export default function Checkout() {
+  
+
+  // useEffect(() => {
+  //   let isMounted = true;
+
+  //   axios.get('/carts').then(res=>{
+  //     if(isMounted)
+  //     {
+  //       if(res.data.status === 200)
+  //       {
+  //         setCart(res.data.cart);
+  //         setLoading(false);
+  //       }
+  //       else if(res.data.status === 401) {
+  //         history.pushState('/');
+  //         swal("Warning", res.data.message, "error")
+  //       }
+  //     }
+  //   });
+
+  //   return () => {
+  //     isMounted = false;
+  //   }
+  // })
+
   return (
     <Form>
       <div className="py-3 bg-warning">
@@ -49,7 +74,7 @@ export default function Checkout() {
 
                   <Col md={6} className="col-md-6">
                     <Form.Group mb={3} className="form-group mb-3">
-                        <Form.Label >First Name</Form.Label>
+                        <Form.Label >Email Address</Form.Label>
                         <Form.Control type="text" name="email" className="form-control"/>
                     </Form.Group>
                   </Col>
@@ -57,7 +82,7 @@ export default function Checkout() {
                   <Col md={6} className="col-md-6">
                     <Form.Group mb={3} className="form-group mb-3">
                         <Form.Label >Address</Form.Label>
-                        <textarea rows="3" className="form-control"></textarea>
+                        <Form.Control type="text" name="address" className="form-control"></Form.Control>
                     </Form.Group>
                   </Col>
 

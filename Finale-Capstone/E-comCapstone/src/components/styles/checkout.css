@@ -21,7 +21,7 @@
 
 .checkout-page {
     margin: 30px auto;
-    width: 80%;
+    width: 55%;
     background-color: rgba(173, 1, 1, 0.133);
     border: 2px solid red;
     border-radius: 5px;
@@ -54,3 +54,5 @@ button {
   button:hover {
     background-color:green;
   }
+
+

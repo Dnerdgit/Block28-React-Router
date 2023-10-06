@@ -114,12 +114,45 @@ body {
     padding-left: 22%;
     font-size: 20px;
     font-weight: 700;
-    border-top: 2px solid black;
+    border-top: 2px solid red;
     color: red;
+    margin-bottom: 20px;
 }
 
 .cart-items-total-price {
     display: flex;
     padding-left: 45%;
-    color: red
+    color: red;
+    background-color: rgba(173, 1, 1, 0.133);
+}
+
+.clear-cart-button {
+    align-items: center;
+}
+
+.clear-cart {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-right: 60px;
+    
+}
+
+.checkout-area {
+    display: flex;
+    justify-content: center;
+    margin-right: 60px;
+}
+
+.checkout-button {
+    background-color: red;
+    padding:10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.checkout-link {
+    color:black;
+    padding:10px;
+
 }

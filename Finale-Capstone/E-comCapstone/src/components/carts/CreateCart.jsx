@@ -1,7 +1,12 @@
 import React from 'react'
 import "../styles/cart.css"
 
-const CreateCart = ({cartItems, handleAddProduct, handleRemoveProduct}) => {
+const CreateCart = ({
+  cartItems, 
+  handleAddProduct, 
+  handleRemoveProduct, 
+  handleCartClearance
+}) => {
 
   const totalPrice = cartItems.reduce((price, item) => price + item.quantity * item.price, 0);
 
@@ -10,6 +15,12 @@ const CreateCart = ({cartItems, handleAddProduct, handleRemoveProduct}) => {
           <div className="cart-items-header">
             <header className='cart-title'>Cart Items</header>
           </div>
+            <div className="clear-cart">
+              {cartItems.length >=1 && (
+                <button className="clear-cart-button" onClick={handleCartClearance}>Clear Cart</button>
+              )}
+            </div>
+          
 
           <br />
           {cartItems.length === 0 && (
@@ -50,7 +61,13 @@ const CreateCart = ({cartItems, handleAddProduct, handleRemoveProduct}) => {
             ${totalPrice}
           </div>
       </div>
-      <button></button>
+      <div className='checkout-area'>
+        <button className="checkout-button" >
+          <a className="checkout-link" 
+            href="/checkout">Proceed to Checkout</a>
+        </button>
+      </div>
+
     </div>
     
   );
