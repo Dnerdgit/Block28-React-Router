@@ -49,12 +49,12 @@ export default function SignInLink () {
     };
 
 
-            useEffect(() => {
-                const userId = localStorage.getItem("token");
-                if (userId) {
-                    isAuthenticated;
-                }
-            })
+        useEffect(() => {
+            const userId = localStorage.getItem("token");
+            if (userId === isAuthenticated) {
+                navigate("/product-list")
+            }
+        })
 
     // const navigate = useNavigate();
 

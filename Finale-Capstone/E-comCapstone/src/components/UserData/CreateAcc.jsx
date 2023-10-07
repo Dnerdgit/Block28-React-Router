@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useSignIn } from 'react-auth-kit';
 // import { useForm } from 'react-hook-form'
-// import { useNavigate } from 'react-router- dom'
+import { useNavigate } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react';
 import '../styles/signin.css'
+import { Navigate } from 'react-router-dom';
 
 export default function CreateAcc () {
     const [username, setUsername] = useState("");
@@ -50,21 +51,25 @@ export default function CreateAcc () {
         }
     };
 
+    const navigate = useNavigate();
 
     useEffect(() => {
         const userId = localStorage.getItem("token");
-        if (userId) {
-            isAuthenticated;
+        if (userId === isAuthenticated) {
+            navigate("/product-list")
         }
-    })
+    })  
 
-    // const navigate = useNavigate();
+    
 
     const handleSubmit = async (event) => {
         event.preventDefault();
 
         const createSignIn = await retrieveSignin(username, password, email);
         console.log(createSignIn);
+
+        
+
     }
  
 
