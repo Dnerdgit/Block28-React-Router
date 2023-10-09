@@ -27,6 +27,14 @@
     border-radius: 5px;
 }
 
+.py-3 {
+    padding: 0 1rem;
+}
+
+.py-4 {
+    padding: 0 1.5rem;
+}
+
 .form-control {
     padding-left: 20px;
 }

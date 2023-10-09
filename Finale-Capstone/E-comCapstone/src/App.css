@@ -108,22 +108,22 @@ button.cart-plus:hover {
 
 
 
-.crud {
+/* .crud {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.table td {
+/* .table td {
   width: 200px;
   height: 50px;
   background-color: rgb(54, 28, 28);
   text-align: center;
   color: white;
-}
+} */
 
-table td button {
+/* table td button {
   padding: 5px 10px;
   border-radius: 5%;
   cursor: pointer;
@@ -147,7 +147,7 @@ table td button.delete {
 
 table td button.delete:hover {
   background-color: rgb(133, 14, 14);
-}
+} */
 
 @keyframes logo-spin {
   from {

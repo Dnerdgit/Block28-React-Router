@@ -23,11 +23,13 @@ function App() {
   const [cartItems, setCartItems] = useState([])
 
   const handleAddProduct = (product) =>{
+    // const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const ProductExist = cartItems.find((item) => item.id === product.id);
     if(ProductExist) {
       setCartItems(cartItems.map((item) => item.id === product.id ?
       {...ProductExist, quantity: ProductExist.quantity + 1}: item )
       );
+      // localStorage.setItem('cart', JSON.stringify(setCartItems))
     } else {
       setCartItems([...cartItems, {...product, quantity: 1}]);
     }

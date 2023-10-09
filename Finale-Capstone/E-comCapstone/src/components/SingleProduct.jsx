@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 
-const SingleProduct = () => {
+const SingleProduct = ({handleAddProduct}) => {
   const { productId } = useParams();
   const [singleItem, setSingleItem] = useState({});
 
@@ -22,6 +22,10 @@ const SingleProduct = () => {
     };
     fetchSingleItem();
   }, [productId]);
+
+
+  if (!Object.keys(singleItem).length > 0) return <div>Product Not Found</div>
+
   return (
     <>
       <div className='single-product'>
@@ -37,6 +41,7 @@ const SingleProduct = () => {
             <br/>
             <br/>
             <Button 
+              onClick={() => handleAddProduct(singleItem)}
               className='cart-plus' variant='success'>
                 Add to Cart
               </Button>
@@ -52,7 +57,3 @@ const SingleProduct = () => {
 }
 
 export default SingleProduct;
-
-
-
-// onClick={() => addToCart(singleItem)}

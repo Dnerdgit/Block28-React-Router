@@ -1,20 +1,18 @@
 import { useEffect, useState } from 'react';
 import { useSignIn } from 'react-auth-kit';
 // import { useForm } from 'react-hook-form'
-// import { useNavigate } from 'react-router- dom'
+import { useNavigate } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react';
 import '../styles/signin.css'
 
-export default function SignInLink () {
+export default function SignInLink ({signIn}) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
     const { 
         error,
-        loginWithPopup,
-        getIdTokenClaims,
         getAccessTokenSilently, 
         loginWithRedirect, 
-        user, 
         isAuthenticated 
     } = useAuth0();
     
@@ -39,6 +37,11 @@ export default function SignInLink () {
                 console.log(result);
 
                 localStorage.setItem("token", token)
+                
+                isAuthenticated(true);
+                navigate("/product-list")
+
+                signIn()
                 return(error);
             }
             
@@ -51,12 +54,12 @@ export default function SignInLink () {
 
         useEffect(() => {
             const userId = localStorage.getItem("token");
-            if (userId === isAuthenticated) {
-                navigate("/product-list")
+            if (userId) {
+                isAuthenticated(true);
             }
-        })
+        },[])
 
-    // const navigate = useNavigate();
+    
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -64,11 +67,6 @@ export default function SignInLink () {
         const signInApproval = await retrieveSignin(username, password);
         console.log(signInApproval);
         
-        // if (signInApproval.ok) {
-        //     navigate("/products-list")
-        // } else {
-        //     alert("Invalid Entry")
-        // }
     } 
  
 
@@ -112,7 +110,11 @@ export default function SignInLink () {
                     </div>
                         <br/>
                         <br/>
+
+                        {!isAuthenticated && (
                         <button className='login' onClick={() => loginWithRedirect} type="submit">Sign In</button>
+                        )}
+
                         <br/>
                         <br/>
                         <a className="make-account" href="/account/create">{!isAuthenticated ? "Don't have an account Sign up!" : 'Continue'}</a>

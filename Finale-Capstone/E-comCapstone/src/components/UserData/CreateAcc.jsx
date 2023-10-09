@@ -6,17 +6,14 @@ import { useAuth0 } from '@auth0/auth0-react';
 import '../styles/signin.css'
 import { Navigate } from 'react-router-dom';
 
-export default function CreateAcc () {
+export default function CreateAcc ({signIn}) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("")
     const { 
         error,
-        loginWithPopup,
-        getIdTokenClaims,
         getAccessTokenSilently, 
         loginWithRedirect, 
-        user, 
         isAuthenticated 
     } = useAuth0();
     
